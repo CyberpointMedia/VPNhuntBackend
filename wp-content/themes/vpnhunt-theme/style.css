@@ -1,0 +1,196 @@
+/*
+Theme Name: VPN Hunt
+Theme URI: https://www.cyberpoint.co
+Author: The Cyber Point Team
+Author URI: https://www.cyberpoint.co
+Description: This theme was built by the Cyber Point team Chandigarh while collaborating with the team situated in Gurugram. This project is managed by Sanjay Aggarwal(Gurugram) and developed by Janmeet Singh(Chandigarh)
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: vpnhunt-theme
+*/
+
+body{
+    font-size: 1.125rem;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn-bg-orange-500{
+    background-color: #FF6961;
+}
+
+.btn-bg-orange-500:hover{
+    background-color: #D8423A;
+}
+
+.btn-bg-orange-200{
+    background: #EC8D71;
+}
+
+.btn-bg-blue-200{
+    background: #4573D2;
+}
+
+.btn-bg-voilet-200{
+    background: #938CE1;
+}
+
+.btn-bg-red-200{
+    background: #F06A6A;
+}
+
+.btn-bg-yellow-200{
+    background: #F1BD6C;
+}
+
+.btn-bg-green-200{
+    background: #5DA283;
+}
+
+.btn-black-dark{
+    background: #0D0E10;
+}
+
+.btn-orange-light-100{
+    background: #EC8D71;
+}
+
+.btn-voilet-light-300{
+    background: #938CE1;
+}
+
+.bg-yellow-light-200{
+    background: #F1BD6C;
+}
+
+.bg-blue-dark-400{
+    background: #4573D2;
+}
+
+.bg-green-dark-400{
+    background: #5DA283;
+}
+
+.social-icons li a{
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+
+.social-icons li a.facebook{
+    background-image: url(images/facebook.svg);
+}
+
+.social-icons li a.facebook:hover{
+    background-image: url(images/facebook-hover.svg);
+}
+
+.social-icons li a.linkdin{
+    background-image: url(images/linkdin.svg);
+}
+
+.social-icons li a.linkdin:hover{
+    background-image: url(images/linkdin-hover.svg);
+}
+
+.social-icons li a.instagram{
+    background-image: url(images/instagram.svg);
+}
+
+.social-icons li a.instagram:hover{
+    background-image: url(images/instagram-hover.svg);
+}
+
+.social-icons li a.youtube{
+    background-image: url(images/youtube.svg);
+}
+
+.social-icons li a.youtube:hover{
+    background-image: url(images/youtube-hover.svg);
+}
+
+.social-icons li a.twitter{
+    background-image: url(images/twitter.svg);
+}
+
+.social-icons li a.twitter:hover{
+    background-image: url(images/twitter-hover.svg);
+}
+
+.category-btn:hover{
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    margin-top: -5px;
+}
+
+.vpnHunt-video {
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.category_sec{
+    padding-bottom: 200px;
+}
+
+.vpnHunt-video video:hover::-webkit-media-controls-panel,
+    .vpnHunt-video video:hover::-webkit-media-controls-play-button,
+    .vpnHunt-video video:hover::-webkit-media-controls-timeline {
+      display: none !important;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9;
+}
+
+.fixed-header nav{
+    background-color: #fff; 
+    transition: background-color 0.3s ease-in-out; 
+}
+
+
+@media (max-width: 768px) {
+    #navbar-sticky {
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        padding-top: 30px;
+        z-index: 9;
+    }
+    button#mobile-menu-button #menu-icon-close {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        z-index: 99;
+    }
+    #navbar-sticky ul li a {
+        border-bottom: 1px solid #e9e9e9;
+    }
+}
+
+@media (min-width: 256px) and (max-width: 767px) {
+    .vpnHunt-video {
+        display: none;
+    }
+    .category_sec {
+        padding-bottom: 0px;
+    }
+}

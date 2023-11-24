@@ -14,3 +14,6 @@
 [16-Nov-2023 07:15:51 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'vpnhunt_enqueue_scripts_styles' not found or invalid function name in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php on line 324
 [16-Nov-2023 07:58:04 UTC] PHP Notice:  Trying to get property 'title' of non-object in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-customize-widgets.php on line 905
 [20-Nov-2023 12:52:18 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\vpnhunt\wp-includes\update.php on line 449
+[24-Nov-2023 10:19:07 UTC] PHP Notice:  Trying to get property 'title' of non-object in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-customize-widgets.php on line 905
+[24-Nov-2023 10:22:16 UTC] PHP Notice:  Trying to get property 'title' of non-object in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-customize-widgets.php on line 905
+[24-Nov-2023 10:23:07 UTC] PHP Notice:  Trying to get property 'title' of non-object in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-customize-widgets.php on line 905
