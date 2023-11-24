@@ -17,3 +17,163 @@
 [24-Nov-2023 10:19:07 UTC] PHP Notice:  Trying to get property 'title' of non-object in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-customize-widgets.php on line 905
 [24-Nov-2023 10:22:16 UTC] PHP Notice:  Trying to get property 'title' of non-object in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-customize-widgets.php on line 905
 [24-Nov-2023 10:23:07 UTC] PHP Notice:  Trying to get property 'title' of non-object in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-customize-widgets.php on line 905
+[24-Nov-2023 12:25:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Social Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Social Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Social_Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social_Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social_Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:32 UTC] PHP Fatal error:  Uncaught Error: Class 'Social_Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social_Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social_Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Social_Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social_Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social_Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Social_Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social_Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social_Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Social_Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social_Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social_Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Social_Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social_Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social_Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:25:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Social_Media' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Social_Media')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Social_Media')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('in in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:26:04 UTC] PHP Fatal error:  Uncaught Error: Class 'My_Widget' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('My_Widget')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('My_Widget')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('init')
+#10  in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:27:10 UTC] PHP Fatal error:  Uncaught Error: Class 'My_Widget' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('My_Widget')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('My_Widget')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('init')
+#10  in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:27:12 UTC] PHP Fatal error:  Uncaught Error: Class 'My_Widget' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('My_Widget')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('My_Widget')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wpdocs_register_widgets('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('init')
+#10  in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[24-Nov-2023 12:28:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Foo_Widget' not found in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php:62
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(115): WP_Widget_Factory->register('Foo_Widget')
+#1 C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php(112): register_widget('Foo_Widget')
+#2 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): register_foo('')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\widgets.php(1858): do_action('widgets_init')
+#6 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): wp_widgets_init('')
+#7 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('init')
+#10 C:\xampp in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62

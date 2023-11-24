@@ -6,7 +6,7 @@
                     <span class="lg:absolute left-0 top-0"><img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png" alt="#" class="inline-block"/></span>
                     <p class="lg:pl-14 text-base font-medium">VPN Hunt is your expert guide in the VPN landscape, offering unbiased reviews, in-depth analysis, and user-centric insights. Trust our 150+ years of combined experience for secure, private browsing.</p>
                 </div>
-                <?php echo dynamic_sidebar( 'social-media' ); ?>
+                
                 <ul class="flex space-x-3 mt-3 lg:mt-0 lg:ml-8 social-icons">
                 
                     <li><a href="javascript:void(0);" class="facebook duration-300"></a></li>

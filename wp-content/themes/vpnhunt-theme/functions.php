@@ -105,17 +105,3 @@ function vpn_picks_init() {
                     );
 }
 add_action( 'init', 'vpn_picks_init' );
-
-// Register two sidebars.
-$sidebars = array ( 'social-media' => 'Footer Social Media Icons' );
-foreach ( $sidebars as $sidebar )
-{
-    register_sidebar(
-        array (
-            'name'          => $sidebar,
-            'id'            => $sidebar,
-            'before_widget' => '',
-            'after_widget'  => ''
-        )
-    );
-}
