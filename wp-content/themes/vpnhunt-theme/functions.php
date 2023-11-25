@@ -90,6 +90,7 @@ function vpn_picks_init() {
                         )
     );
     register_post_type( 'product', $args );
+
     
     // register taxonomy
     register_taxonomy(  'vpn_providers_category', 
@@ -105,3 +106,50 @@ function vpn_picks_init() {
                     );
 }
 add_action( 'init', 'vpn_picks_init' );
+
+
+function vpnhunt_sidebars_setup(){
+    register_sidebar([
+        'name'          => esc_html__('Footer Top Left'),
+        'id'            => 'footer-top-left',
+        'description'   => '',
+        'before_widget' => '<div class="relative">',
+        'after_widget'  => '</div>'
+    ]);
+
+    register_sidebar([
+        'name'          => esc_html__('Footer Top Right'),
+        'id'            => 'footer-top-right',
+        'description'   => '',
+        'before_widget' => '<ul class="flex space-x-3 mt-3 lg:mt-0 lg:ml-8 social-icons">',
+        'after_widget'  => '</ul>'
+    ]);
+}
+
+add_action('widgets_init', 'vpnhunt_sidebars_setup');
+
+
+function wporg_settings_init() {
+	// register a new setting for "reading" page
+	register_setting('reading', 'wporg_setting_name');
+
+	// register a new section in the "reading" page
+	add_settings_section(
+		'wporg_settings_section',
+		'WPOrg Settings Section', 'wporg_settings_section_callback',
+		'options-general'
+	);
+
+	// register a new field in the "wporg_settings_section" section, inside the "reading" page
+	add_settings_field(
+		'wporg_settings_field',
+		'WPOrg Setting', 'wporg_settings_field_callback',
+		'reading',
+		'wporg_settings_section'
+	);
+}
+
+/**
+ * register wporg_settings_init to the admin_init action hook
+ */
+add_action('admin_init', 'wporg_settings_init');

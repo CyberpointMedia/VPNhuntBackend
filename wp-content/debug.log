@@ -177,3 +177,10 @@ Stack trace:
 #8 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
 #9 C:\xampp\htdocs\vpnhunt\wp-settings.php(643): do_action('init')
 #10 C:\xampp in C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-widget-factory.php on line 62
+[25-Nov-2023 07:03:04 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\xampp\htdocs\vpnhunt\wp-includes\functions.php on line 6031
+[25-Nov-2023 07:07:12 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\xampp\htdocs\vpnhunt\wp-includes\functions.php on line 6031
+[25-Nov-2023 07:07:35 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\xampp\htdocs\vpnhunt\wp-includes\functions.php on line 6031
+[25-Nov-2023 07:08:45 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\xampp\htdocs\vpnhunt\wp-includes\functions.php on line 6031
+[25-Nov-2023 07:37:06 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\xampp\htdocs\vpnhunt\wp-includes\functions.php on line 6031
+[25-Nov-2023 07:38:35 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\xampp\htdocs\vpnhunt\wp-includes\functions.php on line 6031
+[25-Nov-2023 07:40:33 UTC] PHP Deprecated:  File Theme without sidebar.php is deprecated since version 3.0.0 with no alternative available. Please include a sidebar.php template in your theme. in C:\xampp\htdocs\vpnhunt\wp-includes\functions.php on line 6031
