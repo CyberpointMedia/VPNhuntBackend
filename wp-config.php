@@ -43,7 +43,7 @@ define( 'WP_POST_REVISIONS', 3 );
 define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true );   // 5.2 and later
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
-define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_DISPLAY', true );
 define( 'WP_MEMORY_LIMIT', '64M' );
 define( 'DISALLOW_FILE_EDIT', true );
 define( 'DISALLOW_FILE_MODS', true );

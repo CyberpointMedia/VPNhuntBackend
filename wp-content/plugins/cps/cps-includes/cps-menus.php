@@ -102,7 +102,7 @@ function cps_settings_page(){
         __('Social Media', 'cps'),
         'manage_options',
         'cps-social-media',
-        'cps_social_media_menu'
+        'cps_social_media_function'
 
     );
 

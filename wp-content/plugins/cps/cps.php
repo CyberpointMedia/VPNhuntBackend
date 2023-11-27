@@ -200,3 +200,23 @@ function cps_atz_s3_menu(){
     </div>
 <?php
 }
+
+function cps_social_media_function(){
+    if( !current_user_can('manage_options')){
+        return;
+    }
+    
+?>
+    <div class="wrap">
+        <div id="cps-panel" class="cps-panel">
+            <div class="cps-panel-content">
+                <?php include( CPS_URL . 'cps/cps-includes/cps-header.php'); ?>
+                <div class="cps-body">
+                    <?php include( CPS_URL . 'cps/cps-templates/cps-social-media.php'); ?>
+                </div>
+            </div>
+            <?php include( CPS_URL . 'cps/cps-includes/cps-footer.php'); ?>
+        </div>
+    </div>
+<?php
+}
