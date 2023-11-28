@@ -19,28 +19,37 @@ function cps_configuration() {
     'cps'
   );
 
-  add_settings_field(
-    // Unique identifier for field
-    'first_name',
-    // Field Title
-    __( 'First Name', 'cps'),
-    // Callback for field markup
-    'cps_first_name_function',
-    // Page to go on
-    'cps',
-    // Section to go in
-    'cps_settings_section'
+    add_settings_field(
+    
+      // Unique identifier for field
+      'footer_logo_description',
+    
+      // Field Title
+      __( 'Footer Logo Description', 'cps'),
+    
+      // Callback for field markup
+      'cps_footer_logo_description_function',
+    
+      // Page to go on
+      'cps',
+    
+      // Section to go in
+      'cps_settings_section'
   );
   
   add_settings_field(
     // Unique identifier for field
-    'last_name',
+    'managed_by',
+    
     // Field Title
-    __( 'Last Name', 'cps'),
+    __( 'Managed By:', 'cps'),
+    
     // Callback for field markup
-    'cps_last_name_function',
+    'cps_managed_by_function',
+    
     // Page to go on
     'cps',
+    
     // Section to go in
     'cps_settings_section'
   );
@@ -55,42 +64,32 @@ add_action( 'admin_init', 'cps_configuration' );
 
 function cps_settings_section_callback() {
 
-  esc_html_e( 'Here are the basic configuration settings for the plugin.', 'cps' );
+  esc_html_e( 'Here are the basic settings for the website', 'cps' );
 
 }
 
-function cps_first_name_function() {
+function cps_footer_logo_description_function() {
 
   $options = get_option( 'cps_configuration_settings' );
 
-	$first_name = '';
-	if( isset( $options[ 'first_name' ] ) ) {
-		$first_name = esc_html( $options['first_name'] );
+	$footer_logo_description = '';
+	if( isset( $options[ 'footer_logo_description' ] ) ) {
+		$footer_logo_description = esc_html( $options['footer_logo_description'] );
 	}
 
-  echo '<input 
-              type="text" 
-              id="first_name" 
-              name="cps_configuration_settings[first_name]" 
-              value="' . $first_name . '" 
-              placeholder="Please enter first name" />';
+  echo '<textarea type="text" id="footer_scripts" name="cps_configuration_settings[footer_logo_description]" placeholder="Please enter section description here" cols="100" rows="10">' . $footer_logo_description . '</textarea>';
 
 }
 
-function cps_last_name_function() {
+function cps_managed_by_function() {
 
   $options = get_option( 'cps_configuration_settings' );
 
-	$last_name = '';
-	if( isset( $options[ 'last_name' ] ) ) {
-		$last_name = esc_html( $options['last_name'] );
+	$managed_by = '';
+	if( isset( $options[ 'managed_by' ] ) ) {
+		$managed_by = esc_html( $options['managed_by'] );
 	}
 
-  echo '<input 
-              type="text" 
-              id="last_name" 
-              name="cps_configuration_settings[last_name]" 
-              value="' . $last_name . '" 
-              placeholder="Please enter last name" />';
+  echo '<textarea type="text" id="footer_scripts" name="cps_configuration_settings[managed_by]" placeholder="Please enter section description here" cols="100" rows="10">' . $managed_by . '</textarea>';
 
 }

@@ -18,9 +18,8 @@
 if( !defined ('WPINC') ){
     die("You are not authorised to access this page");
 }
-
 define( 'CPS_URL', WP_PLUGIN_DIR . '/');
-define( 'CPS_PAGE_DESC', 'This is a custom plugin created by the Cyber Point Team that combines the functionality of different plugins.' );
+define( 'CPS_PAGE_DESC', '' );
 
 //ENQUEUE CSS
 include( CPS_URL . 'cps/cps-includes/cps-styles.php');
@@ -40,7 +39,13 @@ include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-configuration.php'
 //Include Configuration Fields 
 include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-header-footer-scripts.php');
 
-include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-atz-s3.php');
+include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-hero-section.php');
+
+include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-canvas-section.php');
+
+include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-face-off-section.php');
+
+include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-why-trust-section.php');
 
 function cps_settings(){
     if( !current_user_can('manage_options')){
@@ -181,7 +186,7 @@ function cps_header_footer_scripts(){
 <?php
 }
 
-function cps_atz_s3_menu(){
+function cps_hero_section_menu(){
     if( !current_user_can('manage_options')){
         return;
     }
@@ -192,7 +197,7 @@ function cps_atz_s3_menu(){
             <div class="cps-panel-content">
                 <?php include( CPS_URL . 'cps/cps-includes/cps-header.php'); ?>
                 <div class="cps-body">
-                    <?php include( CPS_URL . 'cps/cps-templates/cps-atz-s3.php'); ?>
+                    <?php include( CPS_URL . 'cps/cps-templates/cps-hero-section.php'); ?>
                 </div>
             </div>
             <?php include( CPS_URL . 'cps/cps-includes/cps-footer.php'); ?>
@@ -201,7 +206,7 @@ function cps_atz_s3_menu(){
 <?php
 }
 
-function cps_social_media_function(){
+function cps_canvas_section_menu(){
     if( !current_user_can('manage_options')){
         return;
     }
@@ -212,7 +217,47 @@ function cps_social_media_function(){
             <div class="cps-panel-content">
                 <?php include( CPS_URL . 'cps/cps-includes/cps-header.php'); ?>
                 <div class="cps-body">
-                    <?php include( CPS_URL . 'cps/cps-templates/cps-social-media.php'); ?>
+                    <?php include( CPS_URL . 'cps/cps-templates/cps-canvas-section.php'); ?>
+                </div>
+            </div>
+            <?php include( CPS_URL . 'cps/cps-includes/cps-footer.php'); ?>
+        </div>
+    </div>
+<?php
+}
+
+function cps_face_off_section_menu(){
+    if( !current_user_can('manage_options')){
+        return;
+    }
+    
+?>
+    <div class="wrap">
+        <div id="cps-panel" class="cps-panel">
+            <div class="cps-panel-content">
+                <?php include( CPS_URL . 'cps/cps-includes/cps-header.php'); ?>
+                <div class="cps-body">
+                    <?php include( CPS_URL . 'cps/cps-templates/cps-face-off-section.php'); ?>
+                </div>
+            </div>
+            <?php include( CPS_URL . 'cps/cps-includes/cps-footer.php'); ?>
+        </div>
+    </div>
+<?php
+}
+
+function cps_why_trust_section_menu(){
+    if( !current_user_can('manage_options')){
+        return;
+    }
+    
+?>
+    <div class="wrap">
+        <div id="cps-panel" class="cps-panel">
+            <div class="cps-panel-content">
+                <?php include( CPS_URL . 'cps/cps-includes/cps-header.php'); ?>
+                <div class="cps-body">
+                    <?php include( CPS_URL . 'cps/cps-templates/cps-why-trust-section.php'); ?>
                 </div>
             </div>
             <?php include( CPS_URL . 'cps/cps-includes/cps-footer.php'); ?>
