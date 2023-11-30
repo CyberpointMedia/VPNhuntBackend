@@ -88,9 +88,7 @@ function cps_sticky_bar(){
 }
 
 function cps_smtp_mailer(){
-    if( !current_user_can('manage_options')){
-        return;
-    }
+    if( !current_user_can('manage_options')){ return; }
     ?>
     <div class="wrap">
         <div id="cps-panel" class="cps-panel">
@@ -103,7 +101,6 @@ function cps_smtp_mailer(){
             <?php include( CPS_URL . 'cps/cps-includes/cps-footer.php'); ?>
         </div>
     </div>
-        
 <?php
 }
 

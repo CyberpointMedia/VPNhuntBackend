@@ -72,32 +72,22 @@ function cps_face_off_section() {
         // Section to go in
         'cps_face_off_general_settings'
     );
-
     
-
-
-    
-
-    
-
-register_setting(
-  'cps_face_off_section_settings',
-  'cps_face_off_section_settings'
-);
+    register_setting(
+        'cps_face_off_section_settings',
+        'cps_face_off_section_settings'
+    );
 
 }
+
 add_action( 'admin_init', 'cps_face_off_section' );
 
 function cps_face_off_general_settings() {
-
     esc_html_e( 'Face Off general settings', 'cps' );
-
 }
 
 function cps_face_off_popular_comparisons() {
-
     esc_html_e( 'Popular Comparisons', 'cps' );
-
 }
 
 function cps_face_off_section_title_function() {

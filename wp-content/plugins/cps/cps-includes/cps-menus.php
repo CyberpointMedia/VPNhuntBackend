@@ -126,15 +126,5 @@ function cps_settings_page(){
         'cps_why_trust_section_menu'
 
     );
-    // add_submenu_page(
-    //     'cps',
-    //     __('Social Media', 'cps'),
-    //     __('Social Media', 'cps'),
-    //     'manage_options',
-    //     'cps-social-media',
-    //     'cps_social_media_function'
-
-    // );
-
 }
 add_action( 'admin_menu', 'cps_settings_page');

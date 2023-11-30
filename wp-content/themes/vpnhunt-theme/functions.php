@@ -19,7 +19,9 @@ function theme_setup(){
 
     //Add menu support
     register_nav_menus( array(
-        'header-menu' => 'Header Menu'
+        'header-menu' => 'Header Menu',
+        'footer-top-menu' => 'Footer Top Menu',
+        'footer-bottom-menu' => 'Footer Bootom Menu'
     ));
     
 }
@@ -32,17 +34,21 @@ function vpnhunt_enqueue_scripts() {
     
     //enqueue styles
     wp_enqueue_style(   'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', array(), '5.15.3' );
+    wp_enqueue_style(   'slick', get_stylesheet_directory_uri() . '/css/slick.css', array(), '1.0' );
     wp_enqueue_style(   'style', get_stylesheet_directory_uri() . '/css/tailwind-styles.css', array(), '1.0' );
     wp_enqueue_style(   'theme-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0' );
     
     //enqueue scripts
-    wp_enqueue_script(  'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script(  'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script(  'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'slick' ), '1.0', true );
+
 }
 
 function add_more_css_attributes ( $url ) {
 	if ( FALSE === strpos( $url, 'font-awesome/5.15.3/css/all.min.css' ) ) return $url;
-	return "$url' integrity='sha512-8i/ZkzBYlL3oL7UI1+rDlp1T8YPuOjvMK6tN2a50N/4zZ1PZUNw8tZtYU0pww+WvPmOgC6Zg7Ffr8Nz3wPu+ARxQ==' crossorigin='anonymous' referrerpolicy='no-referrer' ";
+	return "$url' crossorigin='anonymous' referrerpolicy='no-referrer' ";
 }
+
 add_filter( 'clean_url', 'add_more_css_attributes', 11, 1 );
 
 // Product Custom Post Type
@@ -89,24 +95,72 @@ function vpn_picks_init() {
                             'page-attributes'
                         )
     );
-    register_post_type( 'product', $args );
+
+    register_post_type( 'best-vpns', $args );
 
     
     // register taxonomy
     register_taxonomy(  'vpn_providers_category', 
                         'vpn_provider', 
                         array( 
-                                'hierarchical' => true, 
-                                'label' => 'Category', 
-                                'query_var' => true, 
-                                'rewrite' => array( 
-                                                    'slug' => 'vpn-providers-category' 
-                                            )
+                                'hierarchical'  => true, 
+                                'label'         => 'Category', 
+                                'query_var'     => true, 
+                                'rewrite'       => array( 
+                                                            'slug' => 'vpn-providers-category' 
+                                                    )
                         )
-                    );
+    );
 }
 add_action( 'init', 'vpn_picks_init' );
 
+//Add Reviews Post Type
+// Product Custom Post Type
+function reviews_init() {
+    // set up product labels
+    $labels = array(
+        'name' => 'Reviews',
+        'singular_name' => 'Review',
+        'add_new' => 'Add New Review',
+        'add_new_item' => 'Add New Review',
+        'edit_item' => 'Edit Review',
+        'new_item' => 'New Review',
+        'all_items' => 'All Reviews',
+        'view_item' => 'View Review',
+        'search_items' => 'Search Reviews',
+        'not_found' =>  'No Review(s) Found',
+        'not_found_in_trash' => 'No Review(s) found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Reviews',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'reviews'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-list-view',
+        'supports' =>   array(
+                            'title',
+                            'editor',
+                            'excerpt',
+                            'trackbacks',
+                            'custom-fields',
+                            'comments',
+                            'revisions',
+                            'thumbnail',
+                            'author',
+                            'page-attributes'
+                        )
+    );
+    register_post_type( 'reviews', $args );
+}
+add_action( 'init', 'reviews_init' );
 
 function vpnhunt_sidebars_setup(){
     register_sidebar([
@@ -154,3 +208,27 @@ function wporg_settings_init() {
  */
 add_action('admin_init', 'wporg_settings_init');
 
+
+add_filter( 'nav_menu_link_attributes', 'wpse156165_menu_add_class', 10, 3 );
+
+function wpse156165_menu_add_class( $classes, $item, $args ) {
+    if(isset($args->add_link_class)) {
+        $classes['class'] = $args->add_link_class;
+    }
+    return $classes;
+}
+
+add_action ( 'category_edit_form_fields', function( $tag ){
+    $cat_title = get_term_meta( $tag->term_id, '_color', true ); ?>
+    <tr class='form-field'>
+        <th scope='row'><label for='color'><?php _e('Category Color'); ?></label></th>
+        <td>
+            <input type='text' name='cat_color' id='cat_color' value='<?php echo $cat_title ?>'>
+            <p class='description'><?php _e('Enter color name, used in best vpns section'); ?></p>
+        </td>
+    </tr> <?php
+});
+add_action ( 'edited_category', function( $term_id ) {
+    if ( isset( $_POST['cat_color'] ) )
+        update_term_meta( $term_id , '_color', $_POST['cat_color'] );
+});
