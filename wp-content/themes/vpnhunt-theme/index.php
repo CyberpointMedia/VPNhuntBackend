@@ -133,39 +133,41 @@
                 <p class="text-lg font-normal my-3"><?php echo $cps_why_trust_section_settings['section_description']; ?></p>
             </div>
         </div>
+        <?php 
+                    $args = array(
+                        'post_type' => 'guide',
+                        'posts_per_page' => 3,
+                        'order' => 'ASC'
+                    );
+                    $count = 1;
+                    $post_query = new WP_Query($args);
+                    if ( $post_query->have_posts() ) : while ( $post_query->have_posts() ) : $post_query->the_post();
+                    if($count % 2 != 0){ ?>
+        
         <div class="flex md:flex-row flex-col flex-wrap align-middle content-center relative items-center text-center md:text-left">
             <div class="md:w-1/2 w-full p-4">
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/images/conselting.png" alt="#" />
+                <img class="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="#" />
             </div>
             <div class="md:w-1/2 w-full p-4 content-center">
-                <h4 class="font-bold text-2xl md:text-3xl">150+ Years of
-                    Combined Experience</h4>
-                <p class="my-3 text-lg">Our experts bring over 150 years of combined experience in cybersecurity, networking, and technology, ensuring that our insights are grounded in deep knowledge and expertise.</p>
+                <h4 class="font-bold text-2xl md:text-3xl"><?php the_title(); ?></h4>
+                <p class="my-3 text-lg"><?php the_excerpt(); ?></p>
                 <a href="javascript:void(0);" class="text-lg font-medium py-1 px-3 rounded btn-bg-orange-500 duration-500 text-white">Meet the Experts</a>
             </div>
         </div>
+        <?php }else{ ?>
         <div class="flex md:flex-row flex-col-reverse flex-wrap align-middle content-center relative items-center text-center md:text-left">
             <div class="md:w-1/2 w-full p-4 content-center">
-                <h4 class="font-bold text-2xl md:text-3xl">Invested <b>16,000</b> hours and <b>$40,000</b> in Testing VPNs</h4>
-                <p class="my-3 text-lg">Our team has devoted countless hours and significant resources to rigorously test and research VPNs. This dedication ensures that our reviews and guides stem from genuine experiences, offering you trustworthy and unbiased insights.</p>
+                <h4 class="font-bold text-2xl md:text-3xl"><?php the_title(); ?></h4>
+                <p class="my-3 text-lg"><?php the_excerpt(); ?></p>
                 <a href="javascript:void(0);" class="text-lg font-medium py-1 px-3 rounded btn-bg-orange-500 duration-500 text-white">Learn How We Test</a>
             </div>
             <div class="md:w-1/2 w-full p-4">
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/images/Product-presentation-.png" alt="#" />
+                <img class="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="#" />
             </div>
         </div>
-        <div class="flex md:flex-row flex-col flex-wrap align-middle content-center relative items-center text-center md:text-left">
-            <div class="md:w-1/2 w-full p-4">
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/images/Pitch-meeting.png" alt="#" />
-            </div>
-            <div class="md:w-1/2 w-full p-4 content-center">
-                <h4 class="font-bold text-2xl md:text-3xl">Reviewed 35+ VPNs</h4>
-                <p class="my-3 text-lg">We've conducted comprehensive reviews of 35+ different VPN providers, covering everything from speed and security to user experience and support.</p>
-                <a href="javascript:void(0);" class="text-lg font-medium py-1 px-3 rounded btn-bg-orange-500 duration-500 text-white">Check VPN Reviews</a>
-            </div>
-        </div>
-       </div>
-    </section>
+        <?php  } $count++; endwhile;  endif; ?>
+    </div>
+</section>
     <!-- why trust vpnHunt end -->
 
     <!-- compare and choose section start -->

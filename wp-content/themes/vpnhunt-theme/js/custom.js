@@ -43,54 +43,55 @@
   // video canvas
   document.addEventListener("DOMContentLoaded", function () {
     // Get the canvas element and its context
-    var canvas = document.getElementById("videoCanvas");
-    var ctx = canvas.getContext("2d");
-  
-    // Create a video element
-    var video = document.createElement("video");
-    video.src = "/vpnhunt/wp-content/themes/vpnhunt-theme/js/vpnHunt.mp4"; // Replace with your video URL or path
-    video.loop = true;
-    video.muted = true;
+    if(document.getElementById("videoCanvas")){
+      var canvas = document.getElementById("videoCanvas");
+      var ctx = canvas.getContext("2d");
+    
+      // Create a video element
+      var video = document.createElement("video");
+      video.src = "/vpnhunt/wp-content/themes/vpnhunt-theme/js/vpnHunt.mp4"; // Replace with your video URL or path
+      video.loop = true;
+      video.muted = true;
 
-    // Autoplay the video
-    video.autoplay = true;
+      // Autoplay the video
+      video.autoplay = true;
   
-    // Set canvas size to match video dimensions after metadata is loaded
-    video.addEventListener("loadedmetadata", function () {
+      // Set canvas size to match video dimensions after metadata is loaded
+      video.addEventListener("loadedmetadata", function () {
         canvas.width = video.videoWidth; // Set canvas width to video width
         canvas.height = video.videoHeight; // Set canvas height to video height
         drawVideo(); // Start drawing video frames
-    });
+      });
 
-    // Draw the video frames onto the canvas
-    function drawVideo() {
+      // Draw the video frames onto the canvas
+      function drawVideo() {
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
         requestAnimationFrame(drawVideo);
-    }
+      }
 
-    // Play the video
-    video.addEventListener("canplaythrough", function () {
+      // Play the video
+      video.addEventListener("canplaythrough", function () {
         video.play();
-    });
+      });
 
-    // Restart the video when it reaches the end
-    video.addEventListener("ended", function () {
+      // Restart the video when it reaches the end
+      video.addEventListener("ended", function () {
         video.currentTime = 0;
         video.play();
-    });
+      });
 
-    // Resize canvas when the window is resized
-    window.addEventListener("resize", function () {
+      // Resize canvas when the window is resized
+      window.addEventListener("resize", function () {
         canvas.width = video.videoWidth; // Adjust canvas width on window resize
         canvas.height = video.videoHeight; // Adjust canvas height on window resize
         drawVideo(); // Redraw video frames after resizing
-    });
+      });
     
     
-    // Append video to the DOM
-    // document.body.appendChild(video);
-
-    });
+      // Append video to the DOM
+      // document.body.appendChild(video);
+    }
+  });
 
 
   // slider for mobile start
@@ -123,6 +124,12 @@
               }
             }
         ]
+      });
+      
+      $('.accordion-toggle').click(function(){
+        var self = $(this).parent();
+        self.toggleClass("collapsed");
+        self.next(".accordion-content").toggleClass("hidden");
       });
   });
   // slider for mobile end

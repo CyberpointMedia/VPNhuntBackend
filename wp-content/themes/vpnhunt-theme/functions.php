@@ -114,6 +114,58 @@ function vpn_picks_init() {
 }
 add_action( 'init', 'vpn_picks_init' );
 
+
+// Product Custom Post Type
+function vpn_guide_init() {
+    // set up product labels
+    $labels = array(
+        'name' => 'Guide',
+        'singular_name' => 'Guide',
+        'add_new' => 'Add New Guide',
+        'add_new_item' => 'Add New Guide',
+        'edit_item' => 'Edit Guide',
+        'new_item' => 'New Guide',
+        'all_items' => 'All Guides',
+        'view_item' => 'View Guide',
+        'search_items' => 'Search Guide',
+        'not_found' =>  'No Guide(s) Found',
+        'not_found_in_trash' => 'No Guide(s) found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Guide',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'guide'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-randomize',
+        'supports' =>   array(
+                            'title',
+                            'editor',
+                            'excerpt',
+                            'trackbacks',
+                            'custom-fields',
+                            'comments',
+                            'revisions',
+                            'thumbnail',
+                            'author',
+                            'page-attributes'
+                        )
+    );
+
+    register_post_type( 'guide', $args );
+
+    
+    
+}
+add_action( 'init', 'vpn_guide_init' );
+
 //Add Reviews Post Type
 // Product Custom Post Type
 function reviews_init() {
@@ -161,6 +213,54 @@ function reviews_init() {
     register_post_type( 'reviews', $args );
 }
 add_action( 'init', 'reviews_init' );
+
+
+// FAQs
+function faqs_init() {
+    // set up product labels
+    $labels = array(
+        'name' => 'FAQs',
+        'singular_name' => 'Frequently Asked Questions',
+        'add_new' => 'Add New FAQ',
+        'add_new_item' => 'Add New FAQ',
+        'edit_item' => 'Edit FAQ',
+        'new_item' => 'New FAQ',
+        'all_items' => 'All FAQs',
+        'view_item' => 'View FAQ',
+        'search_items' => 'Search FAQ',
+        'not_found' =>  'No FAQ(s) Found',
+        'not_found_in_trash' => 'No FAQ(s) found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'FAQs',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'faqs'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-list-view',
+        'supports' =>   array(
+                            'title',
+                            'editor',
+                            'excerpt',
+                            'trackbacks',
+                            'custom-fields',
+                            'comments',
+                            'revisions',
+                            'thumbnail',
+                            'author',
+                            'page-attributes'
+                        )
+    );
+    register_post_type( 'faqs', $args );
+}
+add_action( 'init', 'faqs_init' );
 
 function vpnhunt_sidebars_setup(){
     register_sidebar([

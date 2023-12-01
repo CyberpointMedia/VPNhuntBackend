@@ -19,6 +19,24 @@ function cps_configuration() {
     'cps'
   );
 
+  add_settings_field(
+    
+    // Unique identifier for field
+    'contact_number',
+  
+    // Field Title
+    __( 'Contact Number', 'cps'),
+  
+    // Callback for field markup
+    'cps_contact_number_function',
+  
+    // Page to go on
+    'cps',
+  
+    // Section to go in
+    'cps_settings_section'
+  );
+
     add_settings_field(
     
       // Unique identifier for field
@@ -67,6 +85,24 @@ function cps_settings_section_callback() {
   esc_html_e( 'Here are the basic settings for the website', 'cps' );
 
 }
+
+function  cps_contact_number_function() {
+
+  $options = get_option( 'cps_configuration_settings' );
+
+	$contact_number = '';
+	if( isset( $options[ 'contact_number' ] ) ) {
+		$contact_number = esc_html( $options['contact_number'] );
+	}
+  
+  echo    '<input 
+                    type="text" 
+                    id="contact_number" 
+                    name="cps_configuration_settings[contact_number]" 
+                    value="' . $contact_number . '" 
+                    placeholder="Please enter contact number" class="regular-text" />';
+}
+
 
 function cps_footer_logo_description_function() {
 
