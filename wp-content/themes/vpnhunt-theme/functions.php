@@ -39,14 +39,14 @@ function vpnhunt_enqueue_scripts() {
     wp_enqueue_style(   'theme-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0' );
     
     //enqueue scripts
-    if (is_page('contact')) {
+    if (is_page('contact') || is_page('about-us')) {
         wp_enqueue_script(  'jquery-validate', get_stylesheet_directory_uri() . '/js/jquery.validate.min.js', array( 'jquery' ), '1.0', true );
         wp_enqueue_script(  'additional-methods', get_stylesheet_directory_uri() . '/js/additional-methods.min.js', array( 'jquery-validate' ), '1.0', true );
     }
     wp_enqueue_script(  'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script(  'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'slick' ), '1.0', true );
     
-    wp_localize_script( 'custom', 'admin_url', array('ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+    wp_localize_script( 'custom', 'admin_url', array('ajax_url' => admin_url( 'admin-ajax.php' ), 'site_url' => get_site_url() ) );
 
 }
 
