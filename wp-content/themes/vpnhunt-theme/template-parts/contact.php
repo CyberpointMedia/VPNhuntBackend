@@ -47,38 +47,33 @@
 
                 <!--contact form start-->
                 <div class="md:w-2/4 w-full">
-                    <form class="">
+                    <form id="contact-form" class="">
                         <div class="mb-4 md:flex md:justify-between">
                             <div class="mb-4 md:mr-2 md:mb-0 md:w-2/4">
                                 <label class="block mb-2" for="firstName">
                                     First name
                                 </label>
-                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" id="firstName" type="text" placeholder="First name" required>
+                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="firstName" type="text" placeholder="First name" value="Janmeet">
                             </div>
                             <div class="md:ml-2 md:w-2/4">
                                 <label class="block mb-2" for="lastName">
                                     Last Name
                                 </label>
-                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" id="lastName" type="text" placeholder="Last Name" required>
+                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="lastName" type="text" placeholder="Last Name" value="Singh">
                             </div>
                         </div>
                         <div class="mb-4">
                             <label class="block mb-2" for="email">
                                 Email
                             </label>
-                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" id="email" type="email" placeholder="you@company.com" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block mb-2" for="phoneNumber">
-                                Phone number
-                            </label>
-                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" id="phoneNumber" type="number" placeholder="+1 (555) 000-0000" required>
+                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="email" type="email" placeholder="you@company.com" value="janmeet@gmail.com">
                         </div>
                         <div class="flex mb-4">
                             <!-- Country Code Input -->
                             <div class="relative">
-                                <select class="bg-white text-gray-700 text-base appearance-none border border-r-0 p-3 pr-3 rounded rounded-tr-none rounded-br-none focus:shadow-none focus:outline-none">
-                                    <option value="+1">USA</option>
+                                <select name="country-code" class="bg-white text-gray-700 text-base appearance-none border border-r-0 p-3 pr-3 rounded rounded-tr-none rounded-br-none focus:shadow-none focus:outline-none">
+                                    <option value="">select</option>
+                                    <option value="+1" >USA</option>
                                     <option value="+44">UK</option>
                                     <option value="+91">India</option>
                                 </select>
@@ -88,14 +83,14 @@
                             </div>
                 
                             <!-- Phone Number Input -->
-                            <input type="tel" class="flex-1 p-3 text-base text-gray-700 border rounded rounded-tl-none rounded-bl-none appearance-none focus:shadow-none focus:outline-none" placeholder="+1 (555) 000-0000" required>
+                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="phoneNumber" type="number" placeholder="+1 (555) 000-0000" value="9914444401">
                         </div>
 
                         <div class="mb-4">
                             <label class="block mb-2" for="phoneNumber">
                                 Message
                             </label>
-                            <textarea class="w-full h-120 p-3 text-base text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none ">Leave us a meesage...</textarea>
+                            <textarea name="message" class="w-full h-120 p-3 text-base text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none " placeholder="Please enter your message">Message here</textarea>
                         </div>
                         <div class="mb-6">
                             <button class="text-lg font-medium py-1 px-3 rounded btn-bg-orange-500 duration-500 text-white focus:outline-none focus:shadow-none" type="submit">
@@ -103,6 +98,7 @@
                             </button>
                         </div>
                     </form>
+                    <span id="response"></span>
                 </div>
                 <!-- contact form end -->
             </div>

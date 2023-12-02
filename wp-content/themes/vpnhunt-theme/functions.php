@@ -39,8 +39,14 @@ function vpnhunt_enqueue_scripts() {
     wp_enqueue_style(   'theme-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0' );
     
     //enqueue scripts
+    if (is_page('contact')) {
+        wp_enqueue_script(  'jquery-validate', get_stylesheet_directory_uri() . '/js/jquery.validate.min.js', array( 'jquery' ), '1.0', true );
+        wp_enqueue_script(  'additional-methods', get_stylesheet_directory_uri() . '/js/additional-methods.min.js', array( 'jquery-validate' ), '1.0', true );
+    }
     wp_enqueue_script(  'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script(  'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'slick' ), '1.0', true );
+    
+    wp_localize_script( 'custom', 'admin_url', array('ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 }
 
@@ -332,3 +338,36 @@ add_action ( 'edited_category', function( $term_id ) {
     if ( isset( $_POST['cat_color'] ) )
         update_term_meta( $term_id , '_color', $_POST['cat_color'] );
 });
+
+
+//Wordpress AJAX functions file
+
+
+add_action( 'wp_ajax_contact_form_submit', 'handle_contact_form' );
+add_action( 'wp_ajax_nopriv_contact_form_submit', 'handle_contact_form' );
+
+function handle_contact_form() {
+	global $wpdb;
+    $formData = array();
+    foreach($_POST['formData'] as $data){
+    	$formData[$data['name']] = $data['value']; 
+    }
+    
+    $table = $wpdb->prefix.'contact_form_requests';
+	$wpdb->insert($table,$formData);
+	$insert_id = $wpdb->insert_id;
+	if($insert_id){
+		$response = array(
+						"returnType" => "true",
+						"message"	 => "You details have been submitted."
+					);
+		echo json_encode($response);
+	}else{
+		$response = array(
+						"returnType" => "false",
+						"message"	 => "Your details could not be submitted."
+					);
+		echo json_encode($response);
+	}
+    wp_die();
+}
