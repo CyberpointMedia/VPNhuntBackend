@@ -165,3 +165,17 @@ label.error {
 .success{
     color: #29ce83;
 }
+
+.dataTables_length select{
+    width: 3rem;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    margin-top: 40px;
+}
+
+.dashicons.dashicons-trash{
+    cursor: pointer;
+}

@@ -53,13 +53,13 @@
                                 <label class="block mb-2" for="firstName">
                                     First name
                                 </label>
-                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="firstName" type="text" placeholder="First name">
+                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="first_name" type="text" placeholder="First name">
                             </div>
                             <div class="md:ml-2 md:w-2/4">
                                 <label class="block mb-2" for="lastName">
                                     Last Name
                                 </label>
-                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="lastName" type="text" placeholder="Last Name">
+                                <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="last_name" type="text" placeholder="Last Name">
                             </div>
                         </div>
                         <div class="mb-4">
@@ -71,7 +71,7 @@
                         <div class="flex mb-4">
                             <!-- Country Code Input -->
                             <div class="relative">
-                                <select name="country-code" class="bg-white text-gray-700 text-base appearance-none border border-r-0 p-3 pr-3 rounded rounded-tr-none rounded-br-none focus:shadow-none focus:outline-none">
+                                <select name="country_code" class="bg-white text-gray-700 text-base appearance-none border border-r-0 p-3 pr-3 rounded rounded-tr-none rounded-br-none focus:shadow-none focus:outline-none">
                                     <option value="">--</option>
                                     <option value="+1" >USA</option>
                                     <option value="+44">UK</option>
@@ -83,7 +83,7 @@
                             </div>
                 
                             <!-- Phone Number Input -->
-                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="phoneNumber" type="number" placeholder="+1 (555) 000-0000">
+                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="phone_number" type="number" placeholder="+1 (555) 000-0000">
                         </div>
 
                         <div class="mb-4">

@@ -25,68 +25,6 @@ function cps_settings_page(){
     
     );
 
-    // add_submenu_page(
-    //     'cps',
-    //     __('External Links', 'cps'),
-    //     __('External Links', 'cps'),
-    //     'manage_options',
-    //     'cps-external-links',
-    //     'cps_external_links'
-
-    // ); 
-
-    // add_submenu_page(
-    //     'cps',
-    //     __('Header-Footer Scripts', 'cps'),
-    //     __('Header-Footer Scripts', 'cps'),
-    //     'manage_options',
-    //     'cps-header-footer-scripts',
-    //     'cps_header_footer_scripts'
-
-    // );
-
-    // add_submenu_page(
-    //     'cps',
-    //     __('Pop-up', 'cps'),
-    //     __('Pop-up', 'cps'),
-    //     'manage_options',
-    //     'cps-pop-up',
-    //     'cps_pop_up'
-
-    // );
-
-    // add_submenu_page(
-    //     'cps',
-    //     __('Sticky Bar', 'cps'),
-    //     __('Sticky Bar', 'cps'),
-    //     'manage_options',
-    //     'cps-sticky-bar',
-    //     'cps_sticky_bar'
-
-    // );
-
-    // add_submenu_page(
-    //     'cps',
-    //     __('SMTP Mail', 'cps'),
-    //     __('SMTP Mail', 'cps'),
-    //     'manage_options',
-    //     'cps-smtp-mailer',
-    //     'cps_smtp_mailer'
-
-    // );
-
-    
-
-    // add_submenu_page(
-    //     'cps',
-    //     __('Translate', 'cps'),
-    //     __('Translate', 'cps'),
-    //     'manage_options',
-    //     'cps-translate',
-    //     'cps_translate'
-
-    // );
-
     add_submenu_page(
         'cps',
         __('Hero Section ', 'cps'),
@@ -124,6 +62,16 @@ function cps_settings_page(){
         'manage_options',
         'cps-why-trust-section',
         'cps_why_trust_section_menu'
+
+    );
+
+    add_submenu_page(
+        'cps',
+        __('Contact Form', 'cps'),
+        __('Contact Form', 'cps'),
+        'manage_options',
+        'cps-contact-form-section',
+        'cps_contact_form_section_menu'
 
     );
 }

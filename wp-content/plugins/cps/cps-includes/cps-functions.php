@@ -68,3 +68,55 @@ function retrieve_comments($page){
       die;
     
 }
+
+add_action( 'wp_ajax_contact_form_submit', 'handle_contact_form' );
+add_action( 'wp_ajax_nopriv_contact_form_submit', 'handle_contact_form' );
+
+function handle_contact_form() {
+	global $wpdb;
+    $formData = array();
+    foreach($_POST['formData'] as $data){
+    	$formData[$data['name']] = $data['value']; 
+    }
+    
+    $table = $wpdb->prefix.'contact_form';
+	$wpdb->insert($table,$formData);
+    $insert_id = $wpdb->insert_id;
+	if($insert_id){
+		$response = array(
+						"returnType" => "true",
+						"message"	 => "You details have been submitted."
+					);
+		echo json_encode($response);
+	}else{
+		$response = array(
+						"returnType" => "false",
+						"message"	 => "Your details could not be submitted."
+					);
+		echo json_encode($response);
+	}
+    wp_die();
+}
+
+add_action( 'wp_ajax_delete_contact_request', 'handle_delete_request' );
+add_action( 'wp_ajax_nopriv_delete_contact_request', 'handle_delete_request' );
+
+function handle_delete_request() {
+	  global $wpdb;
+    $id = $_REQUEST['id'];
+    $table = $wpdb->prefix.'contact_form';
+    if($wpdb->delete( $table, array( 'id' => $id ) )){
+		  $response = array(
+						        "returnType" => "true",
+						        "message"	 => "Record deleted successfully."
+					        );
+		echo json_encode($response);
+	}else{
+		$response = array(
+						          "returnType" => "false",
+						          "message"	 => "Record could not be submitted."
+					      );
+		echo json_encode($response);
+	}
+    wp_die();
+}

@@ -28109,3 +28109,364 @@ Stack trace:
 [02-Dec-2023 12:39:15 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
 [02-Dec-2023 12:39:15 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
 [02-Dec-2023 12:39:15 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[02-Dec-2023 16:34:28 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[02-Dec-2023 16:34:28 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[02-Dec-2023 16:34:28 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[02-Dec-2023 16:45:05 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[02-Dec-2023 16:45:05 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[02-Dec-2023 16:45:05 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[02-Dec-2023 16:49:10 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''vwppn_contact_form_requests' (
+                `id` int(11) NOT NULL,
+    ...' at line 1 for query CREATE TABLE vwppn_ . 'vwppn_contact_form_requests' (
+                `id` int(11) NOT NULL,
+                `firstName` varchar(50) NOT NULL,
+                `lastName` varchar(50) NOT NULL,
+                `email` varchar(100) NOT NULL,
+                `phoneNumber` varchar(10) NOT NULL,
+                `country-code` varchar(5) NOT NULL,
+                `message` text NOT NULL
+            ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[02-Dec-2023 16:49:30 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''vwppn_contact_form_requests' (
+                `id` int(11) NOT NULL,
+    ...' at line 1 for query CREATE TABLE vwppn_ . 'vwppn_contact_form_requests' (
+                `id` int(11) NOT NULL,
+                `firstName` varchar(50) NOT NULL,
+                `lastName` varchar(50) NOT NULL,
+                `email` varchar(100) NOT NULL,
+                `phoneNumber` varchar(10) NOT NULL,
+                `country-code` varchar(5) NOT NULL,
+                `message` text NOT NULL
+            ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[02-Dec-2023 16:50:54 UTC] WordPress database error Unknown database 'vwppn_' for query CREATE TABLE vwppn_ . `vwppn_contact_form_requests` (
+                `id` int(11) NOT NULL,
+                `firstName` varchar(50) NOT NULL,
+                `lastName` varchar(50) NOT NULL,
+                `email` varchar(100) NOT NULL,
+                `phoneNumber` varchar(10) NOT NULL,
+                `country-code` varchar(5) NOT NULL,
+                `message` text NOT NULL
+            ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[02-Dec-2023 16:52:56 UTC] PHP Parse error:  syntax error, unexpected 'TABLE' (T_STRING) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php on line 287
+[02-Dec-2023 18:24:13 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[02-Dec-2023 18:24:13 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[02-Dec-2023 18:24:13 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:20:53 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:20:53 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:20:53 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:03 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:21:03 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:03 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:05 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:21:05 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:05 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:11 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:21:11 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:11 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:25 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:21:25 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:21:25 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:23:06 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:23:06 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:23:06 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:23:15 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:23:15 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:23:15 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:23:51 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:23:51 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:23:51 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:26:35 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:26:35 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:26:35 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:27:22 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:27:22 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:27:22 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:31:35 UTC] WordPress database error Incorrect table definition; there can be only one auto column and it must be defined as a key for query CREATE TABLE vwppn_contact_form (
+		`id` int(11) NOT NULL AUTO_INCREMENT,
+        `firstName` varchar(50) NOT NULL,
+        `lastName` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phoneNumber` varchar(10) NOT NULL,
+        `country-code` varchar(5) NOT NULL,
+        `message` text NOT NULL
+	) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[04-Dec-2023 04:35:27 UTC] WordPress database error Incorrect table definition; there can be only one auto column and it must be defined as a key for query CREATE TABLE vwppn_contact_form (
+		`id` int(11) NOT NULL AUTO_INCREMENT,
+        `firstName` varchar(50) NOT NULL,
+        `lastName` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phoneNumber` varchar(10) NOT NULL,
+        `country-code` varchar(5) NOT NULL,
+        `message` text NOT NULL
+	) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[04-Dec-2023 04:35:49 UTC] WordPress database error Incorrect table definition; there can be only one auto column and it must be defined as a key for query CREATE TABLE vwppn_contact_form (
+		`id` int(11) NOT NULL AUTO_INCREMENT,
+        `firstName` varchar(50) NOT NULL,
+        `lastName` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phoneNumber` varchar(10) NOT NULL,
+        `country-code` varchar(5) NOT NULL,
+        `message` text NOT NULL
+	) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[04-Dec-2023 04:37:08 UTC] WordPress database error Incorrect table definition; there can be only one auto column and it must be defined as a key for query CREATE TABLE vwppn_contact_form (
+		`id` int(11) NOT NULL AUTO_INCREMENT,
+        `firstName` varchar(50) NOT NULL,
+        `lastName` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phoneNumber` varchar(10) NOT NULL,
+        `country-code` varchar(5) NOT NULL,
+        `message` text NOT NULL
+	) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[04-Dec-2023 04:42:47 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form_requests' doesn't exist for query SHOW FULL COLUMNS FROM `vwppn_contact_form_requests` made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:43:06 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form_requests' doesn't exist for query SHOW FULL COLUMNS FROM `vwppn_contact_form_requests` made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:43:16 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form_requests' doesn't exist for query SHOW FULL COLUMNS FROM `vwppn_contact_form_requests` made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:44:38 UTC] PHP Fatal error:  Cannot redeclare handle_contact_form() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php:350) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php on line 298
+[04-Dec-2023 04:46:35 UTC] PHP Fatal error:  Cannot redeclare handle_contact_form() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php:300) in C:\xampp\htdocs\vpnhunt\wp-content\themes\vpnhunt-theme\functions.php on line 349
+[04-Dec-2023 04:48:46 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'janmeet_singh@outlook.com', '', '', 'My Message') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:48:46 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'janmeet_singh@outlook.com', '', '', 'My Message') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:50:54 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:50:54 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:50:54 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:51:04 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form' doesn't exist for query SHOW FULL COLUMNS FROM `vwppn_contact_form` made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:51:04 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form' doesn't exist for query SHOW FULL COLUMNS FROM `vwppn_contact_form` made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:51:36 UTC] WordPress database error  for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'dev.janmeet@gmail.com', '', '', 'sdfsdfsdfsdfsdfdsf') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:52:46 UTC] WordPress database error  for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'dev.janmeet@gmail.com', '', '', 'sdfsdfsdfsdfsdfdsf') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:53:28 UTC] WordPress database error  for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'dev.janmeet@gmail.com', '', '', 'sdfsdfsdfsdfsdfdsf') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:56:29 UTC] WordPress database error  for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'dev.janmeet@gmail.com', '', '', 'sdfsdfsdfsdfsdfdsf') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:57:32 UTC] WordPress database error  for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'dev.janmeet@gmail.com', '', '', 'sdfsdfsdfsdfsdfdsf') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 04:59:24 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 04:59:24 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 04:59:24 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 05:07:48 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 05:07:48 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 05:07:48 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 05:13:52 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'current_timestamp(),
+        `update_date` datetime NULL ON UPDATE CURRENT_T...' at line 9 for query CREATE TABLE vwppn_contact_form (
+		`id` int(11) primary key NOT NULL AUTO_INCREMENT,
+        `firstName` varchar(50) NOT NULL,
+        `lastName` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phoneNumber` varchar(10) NULL,
+        `country-code` varchar(5) NULL,
+        `message` text NOT NULL,
+        `create_date` datetime current_timestamp(),
+        `update_date` datetime NULL ON UPDATE CURRENT_TIMESTAMP()
+	) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[04-Dec-2023 05:17:34 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+        /*`update_date` datetime NULL*/
+	) DEFAULT CHARA...' at line 9 for query CREATE TABLE vwppn_contact_form (
+		`id` int(11) primary key NOT NULL AUTO_INCREMENT,
+        `firstName` varchar(50) NOT NULL,
+        `lastName` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phoneNumber` varchar(10) NULL,
+        `country-code` varchar(5) NULL,
+        `message` text NOT NULL,
+        `create_date` datetime CURRENT_TIMESTAMP,
+        /*`update_date` datetime NULL*/
+	) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[04-Dec-2023 05:33:31 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 05:33:31 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 05:33:31 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 05:52:17 UTC] PHP Fatal error:  Cannot redeclare cps_canvas_section_title_function() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-canvas-section.php:83) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 83
+[04-Dec-2023 05:52:17 UTC] PHP Fatal error:  Cannot redeclare cps_canvas_section_title_function() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-canvas-section.php:83) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 83
+[04-Dec-2023 05:52:54 UTC] PHP Fatal error:  Cannot redeclare cps_canvas_section_description_function() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-canvas-section.php:100) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 99
+[04-Dec-2023 06:18:06 UTC] PHP Notice:  Undefined property: stdClass::$name in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 86
+[04-Dec-2023 06:18:06 UTC] PHP Notice:  Undefined property: stdClass::$name in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 86
+[04-Dec-2023 06:18:22 UTC] PHP Notice:  Undefined variable: wpdb in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 82
+[04-Dec-2023 06:18:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_results() on null in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php:82
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-admin\includes\template.php(1783): cps_contact_form_section_function(Array)
+#1 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-templates\cps-contact-form-section.php(1): do_settings_sections('cps-contact-for...')
+#2 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php(279): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): cps_contact_form_section_menu('')
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\vpnhunt\wp-admin\admin.php(259): do_action('home_page_cps-c...')
+#7 {main}
+  thrown in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 82
+[04-Dec-2023 06:18:32 UTC] PHP Notice:  Undefined variable: wpdb in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 81
+[04-Dec-2023 06:18:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_results() on null in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php:81
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-admin\includes\template.php(1783): cps_contact_form_section_function(Array)
+#1 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-templates\cps-contact-form-section.php(1): do_settings_sections('cps-contact-for...')
+#2 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php(279): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): cps_contact_form_section_menu('')
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\vpnhunt\wp-admin\admin.php(259): do_action('home_page_cps-c...')
+#7 {main}
+  thrown in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 81
+[04-Dec-2023 06:19:31 UTC] PHP Warning:  require_once(wp-load.php): failed to open stream: No such file or directory in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:19:31 UTC] PHP Fatal error:  require_once(): Failed opening required 'wp-load.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:20:22 UTC] PHP Warning:  require_once(wp-load.php): failed to open stream: No such file or directory in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:20:22 UTC] PHP Fatal error:  require_once(): Failed opening required 'wp-load.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:20:34 UTC] PHP Warning:  require_once(/wp-load.php): failed to open stream: No such file or directory in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:20:34 UTC] PHP Fatal error:  require_once(): Failed opening required '/wp-load.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:20:56 UTC] PHP Warning:  require_once(): http:// wrapper is disabled in the server configuration by allow_url_include=0 in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:20:56 UTC] PHP Warning:  require_once(http://localhost/vpnhunt/wp-load.php): failed to open stream: no suitable wrapper could be found in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:20:56 UTC] PHP Fatal error:  require_once(): Failed opening required 'http://localhost/vpnhunt/wp-load.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 3
+[04-Dec-2023 06:21:55 UTC] PHP Notice:  Undefined variable: wpdb in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 84
+[04-Dec-2023 06:21:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_results() on null in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php:84
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-admin\includes\template.php(1783): cps_contact_form_section_function(Array)
+#1 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-templates\cps-contact-form-section.php(1): do_settings_sections('cps-contact-for...')
+#2 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php(279): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): cps_contact_form_section_menu('')
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\vpnhunt\wp-admin\admin.php(259): do_action('home_page_cps-c...')
+#7 {main}
+  thrown in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 84
+[04-Dec-2023 06:23:01 UTC] PHP Notice:  Undefined variable: wpdb in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 84
+[04-Dec-2023 06:23:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_results() on null in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php:84
+Stack trace:
+#0 C:\xampp\htdocs\vpnhunt\wp-admin\includes\template.php(1783): cps_contact_form_section_function(Array)
+#1 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-templates\cps-contact-form-section.php(1): do_settings_sections('cps-contact-for...')
+#2 C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php(279): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(324): cps_contact_form_section_menu('')
+#4 C:\xampp\htdocs\vpnhunt\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\vpnhunt\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\vpnhunt\wp-admin\admin.php(259): do_action('home_page_cps-c...')
+#7 {main}
+  thrown in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 84
+[04-Dec-2023 06:25:40 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:25:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:25:56 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:25:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:25:56 UTC] PHP Notice:  Undefined property: wpdb::$contact_form in C:\xampp\htdocs\vpnhunt\wp-includes\class-wpdb.php on line 783
+[04-Dec-2023 06:25:56 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 for query SELECT * FROM   made by do_action('home_page_cps-contact-form-section'), WP_Hook->do_action, WP_Hook->apply_filters, cps_contact_form_section_menu, include('/plugins/cps/cps-templates/cps-contact-form-section.php'), do_settings_sections, cps_contact_form_section_function
+[04-Dec-2023 06:25:56 UTC] PHP Notice:  Undefined variable: page in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 87
+[04-Dec-2023 06:25:56 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 87
+[04-Dec-2023 06:25:56 UTC] PHP Notice:  Undefined variable: page in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 88
+[04-Dec-2023 06:25:56 UTC] PHP Notice:  Trying to get property 'post_title' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 88
+[04-Dec-2023 06:26:25 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:26:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:26:30 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:26:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 104
+[04-Dec-2023 06:26:30 UTC] PHP Notice:  Undefined property: wpdb::$contact_form in C:\xampp\htdocs\vpnhunt\wp-includes\class-wpdb.php on line 783
+[04-Dec-2023 06:26:30 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 for query SELECT * FROM   made by do_action('home_page_cps-contact-form-section'), WP_Hook->do_action, WP_Hook->apply_filters, cps_contact_form_section_menu, include('/plugins/cps/cps-templates/cps-contact-form-section.php'), do_settings_sections, cps_contact_form_section_function
+[04-Dec-2023 06:27:26 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:27:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:27:31 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:27:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:28:32 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:28:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:28:34 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:28:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:29:04 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:29:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:29:04 UTC] PHP Notice:  Undefined property: wpdb::$contact_form in C:\xampp\htdocs\vpnhunt\wp-includes\class-wpdb.php on line 783
+[04-Dec-2023 06:29:04 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 for query SELECT * FROM   made by do_action('home_page_cps-contact-form-section'), WP_Hook->do_action, WP_Hook->apply_filters, cps_contact_form_section_menu, include('/plugins/cps/cps-templates/cps-contact-form-section.php'), do_settings_sections, cps_contact_form_section_function
+[04-Dec-2023 06:29:28 UTC] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:29:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 103
+[04-Dec-2023 06:29:48 UTC] PHP Notice:  Undefined property: wpdb::$contact_form in C:\xampp\htdocs\vpnhunt\wp-includes\class-wpdb.php on line 783
+[04-Dec-2023 06:29:48 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 for query SELECT * FROM   made by do_action('home_page_cps-contact-form-section'), WP_Hook->do_action, WP_Hook->apply_filters, cps_contact_form_section_menu, include('/plugins/cps/cps-templates/cps-contact-form-section.php'), do_settings_sections, cps_contact_form_section_function
+[04-Dec-2023 06:30:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''vwppn_contact_form'' at line 1 for query SELECT * FROM  'vwppn_contact_form' made by do_action('home_page_cps-contact-form-section'), WP_Hook->do_action, WP_Hook->apply_filters, cps_contact_form_section_menu, include('/plugins/cps/cps-templates/cps-contact-form-section.php'), do_settings_sections, cps_contact_form_section_function
+[04-Dec-2023 06:35:18 UTC] PHP Notice:  Undefined property: stdClass::$phone_number in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 109
+[04-Dec-2023 06:35:18 UTC] PHP Notice:  Undefined property: stdClass::$phone_number in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 109
+[04-Dec-2023 06:42:10 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form' doesn't exist for query SELECT * FROM  `vwppn_contact_form` made by do_action('home_page_cps-contact-form-section'), WP_Hook->do_action, WP_Hook->apply_filters, cps_contact_form_section_menu, include('/plugins/cps/cps-templates/cps-contact-form-section.php'), do_settings_sections, cps_contact_form_section_function
+[04-Dec-2023 06:42:23 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1,
+        `create_date` datetime NOT NULL DEFAULT current_timestamp(),
+   ...' at line 9 for query CREATE TABLE vwppn_contact_form (
+		`id` int(11) primary key NOT NULL AUTO_INCREMENT,
+        `firstName` varchar(50) NOT NULL,
+        `lastName` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phoneNumber` varchar(10) NULL,
+        `country-code` varchar(5) NULL,
+        `message` text NOT NULL,
+        `status` tinyint(1)  1,
+        `create_date` datetime NOT NULL DEFAULT current_timestamp(),
+        `update_date` datetime DEFAULT NULL ON UPDATE current_timestamp()
+	) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_cps/cps.php'), WP_Hook->do_action, WP_Hook->apply_filters, jal_install, dbDelta
+[04-Dec-2023 06:47:15 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 06:47:15 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:47:15 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:47:21 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 06:47:21 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:47:21 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:47:44 UTC] PHP Notice:  Undefined property: stdClass::$first_name in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 108
+[04-Dec-2023 06:47:44 UTC] PHP Notice:  Undefined property: stdClass::$last_name in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 109
+[04-Dec-2023 06:47:44 UTC] PHP Notice:  Undefined property: stdClass::$country_code in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 111
+[04-Dec-2023 06:47:44 UTC] PHP Notice:  Undefined property: stdClass::$phone in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 111
+[04-Dec-2023 06:48:48 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 06:48:48 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:48:48 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:49:07 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form' doesn't exist for query SHOW FULL COLUMNS FROM `vwppn_contact_form` made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 06:49:12 UTC] WordPress database error Table 'vpnhunt_15112023.vwppn_contact_form' doesn't exist for query SHOW FULL COLUMNS FROM `vwppn_contact_form` made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 06:49:32 UTC] WordPress database error Unknown column 'firstName' in 'field list' for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'janmeet_singh@outlook.com', '', '', 'Message Here ') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 06:49:35 UTC] WordPress database error Unknown column 'firstName' in 'field list' for query INSERT INTO `vwppn_contact_form` (`firstName`, `lastName`, `email`, `country-code`, `phoneNumber`, `message`) VALUES ('Janmeet', 'Singh', 'janmeet_singh@outlook.com', '', '', 'Message Here ') made by do_action('wp_ajax_contact_form_submit'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form
+[04-Dec-2023 06:49:37 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 06:49:37 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:49:37 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:51:34 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 06:51:34 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:51:34 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:51:59 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 06:51:59 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:51:59 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:52:04 UTC] PHP Notice:  Undefined property: stdClass::$phone in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\page-sections\cps-fields-contact-form-section.php on line 111
+[04-Dec-2023 06:57:09 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 06:57:09 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 06:57:09 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:04:25 UTC] PHP Fatal error:  Cannot redeclare handle_contact_form() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php:325) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 75
+[04-Dec-2023 07:04:31 UTC] PHP Fatal error:  Cannot redeclare handle_contact_form() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps.php:325) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 75
+[04-Dec-2023 07:04:44 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:04:44 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:04:44 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:05:03 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:05:03 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:05:03 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:06:07 UTC] PHP Fatal error:  Cannot redeclare handle_contact_form() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php:76) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 104
+[04-Dec-2023 07:07:08 UTC] PHP Fatal error:  Cannot redeclare handle_contact_form() (previously declared in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php:76) in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 104
+[04-Dec-2023 07:17:10 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:17:10 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:17:10 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:17:14 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:17:14 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:17:14 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:17:19 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:17:19 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:17:19 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:35:25 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:35:25 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:35:25 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:37:30 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:37:30 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:37:30 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:37:49 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:37:49 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:37:49 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:40:08 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:40:08 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:40:08 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:41:08 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:41:08 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:41:08 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:42:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:42:04 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:42:04 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:43:24 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:43:24 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:43:24 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:45:41 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:45:41 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:45:41 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:46:39 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:46:39 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:46:39 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:46:57 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:46:57 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:46:57 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:48:27 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:48:27 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:48:27 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:51:39 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:51:39 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:51:39 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:54:41 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:54:41 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:54:41 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:58:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 07:58:32 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 07:58:32 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56

@@ -192,6 +192,9 @@
             
         
       });
+      $('.dashicons-trash').click(function(){
+        alert("Hello");
+      });
   });
   // slider for mobile end
 

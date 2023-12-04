@@ -3,8 +3,12 @@
 //Load JS Backend
 function cps_admin_scripts() {
     wp_enqueue_script( "cps-admin", "/wp-content/plugins/cps/js/cps-admin.js", ['jquery'], time() );
+    wp_enqueue_script( "cps-bootstrap", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", ['jquery'], time() );
+    wp_enqueue_script( "cps-datatable", "//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js", ['jquery'], time() );
     wp_enqueue_script( "cps-jquery-validate", "/wp-content/plugins/cps/js/jquery.validate.min.js", ['cps-admin'], time() );
     wp_localize_script( 'cps-admin', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
+    wp_localize_script( 'custom', 'admin_url', array('ajax_url' => admin_url( 'admin-ajax.php' ), 'site_url' => get_site_url() ) );
+    
 
 }
 add_action( "admin_enqueue_scripts", "cps_admin_scripts", 100 );

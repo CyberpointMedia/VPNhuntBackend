@@ -47,6 +47,8 @@ include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-face-off-section.p
 
 include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-why-trust-section.php');
 
+include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-contact-form-section.php');
+
 function cps_settings(){
     if( !current_user_can('manage_options')){
         return;
@@ -262,3 +264,57 @@ function cps_why_trust_section_menu(){
     </div>
 <?php
 }
+
+function cps_contact_form_section_menu(){
+    if( !current_user_can('manage_options')){
+        return;
+    }
+    
+?>
+    <div class="wrap">
+        <div id="cps-panel" class="cps-panel">
+            <div class="cps-panel-content">
+                <?php include( CPS_URL . 'cps/cps-includes/cps-header.php'); ?>
+                <div class="cps-body">
+                    <?php include( CPS_URL . 'cps/cps-templates/cps-contact-form-section.php'); ?>
+                </div>
+            </div>
+            <?php include( CPS_URL . 'cps/cps-includes/cps-footer.php'); ?>
+        </div>
+    </div>
+<?php
+}
+
+
+global $jal_db_version;
+$jal_db_version = '1.0';
+
+function jal_install() {
+	global $wpdb;
+	global $jal_db_version;
+
+	$table_name = $wpdb->prefix . 'contact_form';
+	
+	$charset_collate = $wpdb->get_charset_collate();
+
+	$sql = "CREATE TABLE $table_name (
+		`id` int(11) primary key NOT NULL AUTO_INCREMENT,
+        `first_name` varchar(50) NOT NULL,
+        `last_name` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        `phone_number` varchar(10) NULL,
+        `country_code` varchar(5) NULL,
+        `message` text NOT NULL,
+        `status` tinyint(1) DEFAULT 1,
+        `create_date` datetime NOT NULL DEFAULT current_timestamp(),
+        `update_date` datetime DEFAULT NULL ON UPDATE current_timestamp()
+	) $charset_collate;";
+    
+    require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+	dbDelta( $sql );
+
+	add_option( 'cps_configuration_settings', $jal_db_version );
+}
+register_activation_hook( __FILE__, 'jal_install' );
+
+
