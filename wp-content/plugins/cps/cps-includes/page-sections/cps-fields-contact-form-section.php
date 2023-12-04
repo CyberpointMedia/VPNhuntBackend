@@ -100,8 +100,6 @@ function cps_contact_form_section_function() {
                 <th scope="col">Phone Number</th>
                 <th scope="col">Create Date</th>
                 <th scope="col">Update Date</th>
-                <th scope="col">Remove</th>
-                
             </tr>
         </thead>
         <tbody>
@@ -114,8 +112,6 @@ function cps_contact_form_section_function() {
                 <td><?php echo $contacts->country_code . '-' .$contacts->phone_number; ?></td>
                 <td><?php echo $contacts->create_date; ?></td>
                 <td><?php echo $contacts->update_date; ?></td>
-                <th scope="col"><span class="dashicons dashicons-trash" data-id="<?php echo $contacts->id; ?>"></span></th>
-                
             </tr>
             <?php $count++; } ?>
         </tbody>

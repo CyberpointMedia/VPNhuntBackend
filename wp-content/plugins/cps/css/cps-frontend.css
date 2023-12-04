@@ -28,3 +28,13 @@ ol.children {
 h3#reply-title small {
   float: right;
 }
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+em{
+  color: red;
+  font-size: 14px;
+}

@@ -46,7 +46,7 @@ function vpnhunt_enqueue_scripts() {
     wp_enqueue_script(  'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script(  'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'slick' ), '1.0', true );
     
-    wp_localize_script( 'custom', 'admin_url', array('ajax_url' => admin_url( 'admin-ajax.php' ), 'site_url' => get_site_url() ) );
+    
 
 }
 
@@ -126,7 +126,7 @@ function vpn_guide_init() {
     // set up product labels
     $labels = array(
         'name' => 'Guide',
-        'singular_name' => 'Guide',
+        'singular_name' => 'Guides',
         'add_new' => 'Add New Guide',
         'add_new_item' => 'Add New Guide',
         'edit_item' => 'Edit Guide',
@@ -171,6 +171,74 @@ function vpn_guide_init() {
     
 }
 add_action( 'init', 'vpn_guide_init' );
+
+
+//vpn post guides
+
+function vpn_post_guides_init() {
+    // set up product labels
+    $labels = array(
+        'name' => 'Guides',
+        'singular_name' => 'Guides',
+        'add_new' => 'Add New Guide',
+        'add_new_item' => 'Add New Guide',
+        'edit_item' => 'Edit Guide',
+        'new_item' => 'New Guide',
+        'all_items' => 'All Guides',
+        'view_item' => 'View Guide',
+        'search_items' => 'Search Guide',
+        'not_found' =>  'No Guide(s) Found',
+        'not_found_in_trash' => 'No Guide(s) found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Guides',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'guide'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-randomize',
+        'taxonomies'  => array( 'guides' ),
+        'supports' =>   array(
+                            'title',
+                            'editor',
+                            'excerpt',
+                            'trackbacks',
+                            'custom-fields',
+                            'comments',
+                            'revisions',
+                            'thumbnail',
+                            'author',
+                            'page-attributes'
+                        )
+    );
+
+    register_post_type( 'guides', $args );
+
+    // register taxonomy
+    register_taxonomy(  'guides_category', 
+                        'guides', 
+                        array( 
+                                'hierarchical'  => true, 
+                                'label'         => 'Category', 
+                                'query_var'     => true, 
+                                'rewrite'       => array( 
+                                                            'slug' => 'guides-category' 
+                                                    )
+                        )
+    );
+
+    
+    
+}
+add_action( 'init', 'vpn_post_guides_init' );
+
 
 //Add Reviews Post Type
 // Product Custom Post Type

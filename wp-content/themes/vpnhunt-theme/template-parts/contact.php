@@ -51,20 +51,20 @@
                         <div class="mb-4 md:flex md:justify-between">
                             <div class="mb-4 md:mr-2 md:mb-0 md:w-2/4">
                                 <label class="block mb-2" for="firstName">
-                                    First name
+                                    First name<em>*</em>
                                 </label>
                                 <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="first_name" type="text" placeholder="First name">
                             </div>
                             <div class="md:ml-2 md:w-2/4">
                                 <label class="block mb-2" for="lastName">
-                                    Last Name
+                                    Last Name<em>*</em>
                                 </label>
                                 <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="last_name" type="text" placeholder="Last Name">
                             </div>
                         </div>
                         <div class="mb-4">
                             <label class="block mb-2" for="email">
-                                Email
+                                Email<em>*</em>
                             </label>
                             <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="email" type="email" placeholder="yourname@mail.com">
                         </div>
@@ -88,7 +88,7 @@
 
                         <div class="mb-4">
                             <label class="block mb-2" for="phoneNumber">
-                                Message
+                                Message<em>*</em>
                             </label>
                             <textarea name="message" class="w-full h-120 p-3 text-base text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none " placeholder="Please enter your message"></textarea>
                         </div>

@@ -333,79 +333,44 @@
         <div class="container mx-auto">
             <div class="text-center">
                 <h2 class="font-medium text-3xl md:text-4xl text-black">
-                    vpnHunt Guides</b>
+                    VPNHunt Guides</b>
                 </h2>
                 <p class="text-lg font-normal mt-3 mb-7">Easy reads on VPNs and staying safe online. All you need to know, all in one place.</p>
             </div>
+
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-3">
+                    <?php 
+                        $args = array(
+                            'post_type' => 'guides',
+                            'posts_per_page' => 7,
+                            'order' => 'ASC'
+                        );
+                        $count = 1;
+                        $post_query = new WP_Query($args);
+                        if ( $post_query->have_posts() ) : while ( $post_query->have_posts() ) : $post_query->the_post();
+                        
+                        if    ($count === 1) :  $color = 'btn-black-dark';
+                        elseif($count === 2) :  $color = 'btn-orange-light-100';
+                        elseif($count === 3) :  $color = 'btn-voilet-light-300';
+                        elseif($count === 4) :  $color = 'bg-yellow-light-200';
+                        elseif($count === 5) :  $color = 'bg-blue-dark-400';
+                        elseif($count === 6) :  $color = 'bg-green-dark-400'; 
+                        endif;
+                        $author_id = get_post_field( 'post_author', get_the_id() );
+                ?>
                 <!-- blog 1 -->
-               <div class="btn-black-dark rounded-lg p-5 pt-8 relative blogs-col">
+                <div class="<?php echo $color; ?> rounded-lg p-5 pt-8 relative blogs-col">
                     <a href="javascript:void(0);" class="absolute right-3 top-3">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/read-more-icon.png" alt="#" class="w-8 h-8"/>
                     </a>
                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog1.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
                    <a href="javascript:void(0);" class="text-white">
-                       <span class="block text-xs font-normal">Aug 7, 2023 | by Mark Oliver  </span>
-                       <span class="block mt-2 text-2xl font-medium">What is a VPN?</a>
+                       <span class="block text-xs font-normal"><?php echo get_the_date(); ?> | by <?php echo get_the_author_meta( 'first_name', $author_id ); ?> </span>
+                       <span class="block mt-2 text-2xl font-medium"><?php the_title() ?></a>
                    </a>
                </div>
-               <!-- blog 2 -->
-               <div class="btn-orange-light-100 rounded-lg p-5 pt-8 relative blogs-col">
-                <a href="javascript:void(0);" class="absolute right-3 top-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/read-more-icon.png" alt="#" class="w-8 h-8"/>
-                </a>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/blog2.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
-                <a href="javascript:void(0);" class="text-black">
-                    <span class="block text-xs font-normal">Aug 7, 2023 | by Mark Oliver  </span>
-                    <span class="block mt-2 text-2xl font-medium">How to Set Up a VPN?
-                    </a>
-                </a>
-            </div>
-            <!-- blog 3 -->
-            <div class="btn-voilet-light-300 rounded-lg p-5 pt-8 relative blogs-col">
-                <a href="javascript:void(0);" class="absolute right-3 top-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/read-more-icon.png" alt="#" class="w-8 h-8"/>
-                </a>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/blog3.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
-                <a href="javascript:void(0);" class="text-black">
-                    <span class="block text-xs font-normal">Aug 7, 2023 | by Mark Oliver  </span>
-                    <span class="block mt-2 text-2xl font-medium">How does a VPN work to encrypt your data?</a>
-                </a>
-            </div>
-            <!-- blog 4 -->
-            <div class="bg-yellow-light-200 rounded-lg p-5 pt-8 relative blogs-col">
-                <a href="javascript:void(0);" class="absolute right-3 top-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/read-more-icon.png" alt="#" class="w-8 h-8"/>
-                </a>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/blog4.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
-                <a href="javascript:void(0);" class="text-black">
-                    <span class="block text-xs font-normal">Aug 7, 2023 | by Mark Oliver  </span>
-                    <span class="block mt-2 text-2xl font-medium">Are VPNs 100% safe?
-                    </a>
-                </a>
-            </div>
-            <!-- blog 5 -->
-            <div class="bg-blue-dark-400 rounded-lg p-5 pt-8 relative blogs-col">
-                <a href="javascript:void(0);" class="absolute right-3 top-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/read-more-icon.png" alt="#" class="w-8 h-8"/>
-                </a>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/blog5.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
-                <a href="javascript:void(0);" class="text-black">
-                    <span class="block text-xs font-normal">Aug 7, 2023 | by Mark Oliver  </span>
-                    <span class="block mt-2 text-2xl font-medium">Are VPNs legal? Check before you use one</a>
-                </a>
-            </div>
-            <!-- blog 6 -->
-            <div class="bg-green-dark-400 rounded-lg p-5 pt-8 relative blogs-col">
-                <a href="javascript:void(0);" class="absolute right-3 top-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/read-more-icon.png" alt="#" class="w-8 h-8"/>
-                </a>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/blog6.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
-                <a href="javascript:void(0);" class="text-black">
-                    <span class="block text-xs font-normal">Aug 7, 2023 | by Mark Oliver  </span>
-                    <span class="block mt-2 text-2xl font-medium">How does a VPN work to encrypt your data?</a>
-                </a>
-            </div>
+               <?php if($count == 6){ $count =0; } $count++; endwhile; endif; ?>
             </div>
             <div class="text-center my-8">
                 <a href="javascript:void(0);" class="btn-bg-orange-500 duration-500 rounded text-white font-medium py-1 px-3 inline-block">See All Guides</a>

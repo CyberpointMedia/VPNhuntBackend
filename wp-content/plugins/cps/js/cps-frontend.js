@@ -34,5 +34,71 @@ function fetch_comments(page_id){
          //console.log(error);
       }
    });
+
+   
+      
    
 }
+
+jQuery(function( $ ){
+   $(document).ready(function(){
+   $("#contact-form").validate({
+      rules: {
+        first_name: { required: true, minlength: 3, maxlength: 20  },
+        last_name: { required: true, minlength: 3, maxlength: 20 },
+        email: { required: true, email: true, maxlength: 30 },
+        phone_number: { minlength: 10, maxlength:10 },
+        message: { required: true, minlength: 10, maxlength: 300}  
+      },
+      messages: {
+        first_name: {
+          required: "Please enter your firstname",
+          minlength: "Please enter atleast 3 characters",
+          maxlength: "Please enter not more than 20 Characters"
+        },
+        last_name: {
+          required: "Please enter your lastname",
+          minlength: "Please enter atleast 3 characters",
+          maxlength: "Please enter not more than 20 Characters"
+        },
+        email: {
+          required: "Please enter email address",
+          email: "Please enter a valid email address",
+          maxlength: "Please enter not more than 20 Characters"
+        },
+        phone_number: { 
+                        minlength: "Must be a 10 digit number", 
+                        maxlength: 'Must be a 10 digit number' 
+        },
+        message: { 
+                    required: "Please enter your message", 
+                    minlength: "Please type atleast 10 characters", 
+                    maxlength: "Only characters are allowed in a message"
+        }
+      },
+      submitHandler: function(e) {
+         event.preventDefault();
+         var formData = jQuery("#contact-form").serializeArray();
+         $.ajax({
+               type : "POST",
+               dataType : "json",
+               url : ajax.url,
+               data : { 
+                  "action": "contact_form_submit",
+                  "formData": formData
+               },
+               success: function(response) {
+                  if(response.returnType == "true"){
+                     $("#contact-form").hide();
+                     $("#response").html(response.message);
+
+                  }else if(response.returnType == "false"){
+                     $("#response").html(response.message);
+                  }
+               }
+          
+            });
+         }
+      });
+   })
+});
