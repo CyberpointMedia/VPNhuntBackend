@@ -28470,3 +28470,21 @@ Stack trace:
 [04-Dec-2023 07:58:32 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
 [04-Dec-2023 07:58:32 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
 [04-Dec-2023 07:58:32 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:07:30 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 08:07:30 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:07:30 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:15:43 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 08:15:43 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:15:43 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:19:55 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 08:19:55 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:19:55 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:20:04 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 08:20:04 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:20:04 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:21:12 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 08:21:12 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:21:12 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:21:18 UTC] PHP Notice:  Trying to get property 'ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 53
+[04-Dec-2023 08:21:18 UTC] PHP Notice:  Undefined variable: comment in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
+[04-Dec-2023 08:21:18 UTC] PHP Notice:  Trying to get property 'comment_ID' of non-object in C:\xampp\htdocs\vpnhunt\wp-content\plugins\cps\cps-includes\cps-functions.php on line 56
