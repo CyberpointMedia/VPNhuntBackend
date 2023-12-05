@@ -2,3 +2,5 @@ vpnhunt
 vpnhunt.pub
 wp-content/uploads
 wp-content/debug.log
+wp-config.php
+wp-config-sample.php
