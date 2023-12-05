@@ -2,80 +2,78 @@
 
 <!-- picks picks start here -->
 <section class="banner-sec">
-    
     <?php $cps_hero_section_settings = get_option( 'cps_hero_section_settings' ); ?>
-    
-    <div    class="bg-fixed bg-center bg-cover md:py-16 py-14" 
-            style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/bg-block-img.png');" >
+    <div class="bg-fixed bg-center bg-cover md:py-16 py-14" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/bg-block-img.png');">
         <div class="container mx-auto text-center">
             <div class="mx-auto max-w-screen-md">
                 <h1 class="font-medium text-4xl md:text-5xl text-black">
                     <?php echo $cps_hero_section_settings['section_title']; ?>
                 </h1>
-                <p class="text-lg font-normal my-7">
-                    <?php echo $cps_hero_section_settings['section_description']; ?>
-                </p>
+                <p class="text-lg font-normal my-7"><?php echo $cps_hero_section_settings['section_description']; ?></p>
             </div>
-                
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4 justify-center text-center">
+                
                 <!-- card 1 start -->
                 <div class="grid grid-cols-2 md:grid-cols-1 p-1 items-center">
                     <h3 class="text-base relative pb-3 md:mb-4">Best <br /><b class="text-lg">Overall</b>
-                    <div class="absolute w-full h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-red.png');"></div>
+                        <div class="absolute w-3/6 h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-red.png');"></div>
                     </h3>
                     <div class="brand_logos box-shadow box-shadow-red bg-white p-2 border rounded mt-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/express-vpn-logo.png" alt="express-VPN" class="mx-auto">
-                    <a href="javascript:void(0);" class="font-medium text-xs text-red-500 my-2 inline-block">ExpressVPN Review</a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/express-vpn-logo.png" alt="express-VPN" class="mx-auto">
+                        <a href="javascript:void(0);" class="font-medium text-xs text-red-500 my-2 inline-block">ExpressVPN Review</a>
                     </div>
                 </div>
+                
                 <!-- card 2 start -->
                 <div class="grid grid-cols-2 md:grid-cols-1 p-1 items-center">
                     <h3 class="text-base relative pb-3 md:mb-4">Best for<br /><b class="text-lg">Gaming</b>
-                        <div class="absolute w-full h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-yellow.png');"></div>
+                        <div class="absolute w-3/6 h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-yellow.png');"></div>
                     </h3>
                     <div class="brand_logos box-shadow box-shadow-yellow bg-white p-2 border rounded mt-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/cyber-ghost.png" alt="Cyber Ghost" class="mx-auto">
                         <a href="javascript:void(0);" class="font-medium text-xs text-red-500 my-2 inline-block">CyberGhost VPN Review</a>
                     </div>
                 </div>
+                    
                 <!-- card 3 start -->
                 <div class="grid grid-cols-2 md:grid-cols-1 p-1 items-center">
                     <h3 class="text-base relative pb-3 md:mb-4">Best for<br /><b class="text-lg">Power Users</b>
-                        <div class="absolute w-full h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-green.png');"></div>
+                        <div class="absolute w-3/6 h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-green.png');"></div>
                     </h3>
                     <div class="brand_logos box-shadow box-shadow-green bg-white p-2 border rounded mt-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/private-internet-access.png" class="mx-auto" alt="Private Internet Access">
                         <a href="javascript:void(0);" class="font-medium text-xs text-red-500 my-2 inline-block">PIA VPN Review</a>
                     </div>
                 </div>
+                   
                 <!-- card 4 start -->
                 <div class="grid grid-cols-2 md:grid-cols-1 p-1 items-center">
                     <h3 class="text-base relative pb-3 md:mb-4">Best for<br /><b class="text-lg">Streaming</b>
-                        <div class="absolute w-full h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-black.png');"></div>
+                        <div class="absolute w-3/6 h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-black.png');"></div>
                     </h3>
                     <div class="brand_logos box-shadow bg-white p-2 border rounded mt-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ip-vanish.png" alt="IP Vanish" class="mx-auto">
-                        <a href="javascript:void(0);" class="font-medium text-xs text-red-500 my-2 inline-block">IPVanish Review</a>
+                            <a href="javascript:void(0);" class="font-medium text-xs text-red-500 my-2 inline-block">IPVanish Review</a>
                     </div>
                 </div>
+                    
                 <!-- card 5 start -->
                 <div class="grid grid-cols-2 md:grid-cols-1 p-1 items-center">
                     <h3 class="text-base relative pb-3 md:mb-4">Best for<br /><b class="text-lg">Tor</b>
-                        <div class="absolute w-full h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-blue.png');"></div>
+                        <div class="absolute w-3/6 h-2 left-1/4 bottom-0 bg-no-repeat bg-auto" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/underline-blue.png');"></div>
                     </h3>
                     <div class="brand_logos box-shadow box-shadow-blue bg-white p-2 border rounded mt-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/nord-vpn.png" alt="nord-VPN" class="mx-auto">
                         <a href="javascript:void(0);" class="font-medium text-xs text-red-500 my-2 inline-block">NordVPN Review</a>
                     </div>
                 </div>
-                </div>                  
+            </div>                  
         </div>
-        </div>
+    </div>
 </section>
 <!-- picks section end here -->
 
-
-<!-- category section start here -->
+<!-- canvas section start here -->
 <section class="category_sec relative bg-cente md:pt-16 pt-14 bg-white overflow-hidden">
     <?php $cps_canvas_section_settings = get_option( 'cps_canvas_section_settings' ); ?>
     <div class="container mx-auto relative z-20">
@@ -83,28 +81,26 @@
             <div class="">
                 <div class="text-center">
                     <h2 class="font-medium text-3xl md:text-4xl text-black">
-                    <?php echo $cps_canvas_section_settings['section_title']; ?>
+                        <?php echo $cps_canvas_section_settings['section_title']; ?>
                     </h2>
-                    <p class="text-lg font-normal my-7"><?php echo $cps_canvas_section_settings['section_description']; ?>
-                   
-                    </p>
+                    <p class="text-lg font-normal my-7"><?php echo $cps_canvas_section_settings['section_description']; ?></p>
                 </div>
             </div>
+            
             <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
-                <?php
-                        $args = array(
-                                'type'       => 'best-vpns',
-                                'taxonomy'   => 'category',
-                                'orderby'    => 'name',
-                                'order'      => 'ASC',
-                                'hide_empty' => false,
-                                'exclude'    => array(1)
-                            );
+                <?php   $args = array(
+                            'type'       => 'best-vpns',
+                            'taxonomy'   => 'category',
+                            'orderby'    => 'name',
+                            'order'      => 'ASC',
+                            'hide_empty' => false,
+                            'exclude'    => array(1)
+                        );
 
                         $cats = get_categories($args);
 
                         foreach($cats as $cat) {
-                    ?>
+                ?>
                 <div class="p-1">
                     <a href="<?php echo get_category_link( $cat->term_id ) ?>" class="rounded font-medium text-lg inline-block text-center p-3 w-full text-black hover:text-white btn-bg-<?php echo get_term_meta($cat->term_id)['_color'][0]; ?>-200 duration-500 category-btn">
                         <?php echo $cat->name; ?>
@@ -112,19 +108,20 @@
                 </div>
                 <?php } ?>
             </div>
-            </div>
+        </div>
     </div>
     <div class="vpnHunt-video">
         <canvas id="videoCanvas"></canvas>
     </div>
 </section>
-<!-- Category Section Ends Here -->
+
+<!-- Canvas Section Ends Here -->
 
 
-    <!-- why trust vpnHunt start here -->
-    <section class="whyHunt_sec md:py-16 py-14 relative">
+<!-- why trust vpnHunt start here -->
+<section class="whyHunt_sec md:py-16 py-14 relative">
     <?php $cps_why_trust_section_settings = get_option( 'cps_why_trust_section_settings' ); ?>
-       <div class="container mx-auto">
+    <div class="container mx-auto">
         <div class="">
             <div class="text-center">
                 <h2 class="font-medium text-3xl md:text-4xl text-black">
@@ -133,17 +130,17 @@
                 <p class="text-lg font-normal my-3"><?php echo $cps_why_trust_section_settings['section_description']; ?></p>
             </div>
         </div>
-        <?php 
-                    $args = array(
-                        'post_type' => 'guide',
-                        'posts_per_page' => 3,
-                        'order' => 'ASC'
-                    );
-                    $count = 1;
-                    $post_query = new WP_Query($args);
-                    if ( $post_query->have_posts() ) : while ( $post_query->have_posts() ) : $post_query->the_post();
-                    if($count % 2 != 0){ ?>
-        
+            <?php 
+            $args = array(
+                'post_type' => 'guide',
+                'posts_per_page' => 3,
+                'order' => 'ASC'
+            );
+                    
+            $count = 1;
+            $post_query = new WP_Query($args);
+            if ( $post_query->have_posts() ) : while ( $post_query->have_posts() ) : $post_query->the_post();
+            if($count % 2 != 0){ ?>
         <div class="flex md:flex-row flex-col flex-wrap align-middle content-center relative items-center text-center md:text-left">
             <div class="md:w-1/2 w-full p-4">
                 <img class="" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="#" />
@@ -154,7 +151,9 @@
                 <a href="javascript:void(0);" class="text-lg font-medium py-1 px-3 rounded btn-bg-orange-500 duration-500 text-white">Meet the Experts</a>
             </div>
         </div>
+
         <?php }else{ ?>
+
         <div class="flex md:flex-row flex-col-reverse flex-wrap align-middle content-center relative items-center text-center md:text-left">
             <div class="md:w-1/2 w-full p-4 content-center">
                 <h4 class="font-bold text-2xl md:text-3xl"><?php the_title(); ?></h4>
@@ -168,88 +167,84 @@
         <?php  } $count++; endwhile;  endif; ?>
     </div>
 </section>
-    <!-- why trust vpnHunt end -->
+<!-- why trust vpnHunt end -->
 
-    <!-- compare and choose section start -->
-    <section class="compare_choose_sec md:py-16 py-14 bg-fixed bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/gray-bg.png');">
-        
-        <?php $cps_face_off_section_settings = get_option('cps_face_off_section_settings'); ?>
-        
-        <div class="container mx-auto">
-            <div class="mx-auto max-w-screen-md text-center">
-                <div class="text-center">
-                    <h2 class="font-medium text-3xl md:text-4xl text-black">
-                        <?php echo $cps_face_off_section_settings['section_title']; ?>
-                    </h2>
-                    <p class="text-lg font-normal my-7">
-                        <?php echo $cps_face_off_section_settings['section_description']; ?>
-                    </p>
+<!-- compare and choose section start -->
+<section class="compare_choose_sec md:py-16 py-14 bg-fixed bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/gray-bg.png');">
+<?php $cps_face_off_section_settings = get_option('cps_face_off_section_settings'); ?>
+    <div class="container mx-auto">
+        <div class="mx-auto max-w-screen-md text-center">
+            <div class="text-center">
+                <h2 class="font-medium text-3xl md:text-4xl text-black">
+                    <?php echo $cps_face_off_section_settings['section_title']; ?>
+                </h2>
+                <p class="text-lg font-normal my-7"><?php echo $cps_face_off_section_settings['section_description']; ?></p>
+            </div>
+            <div class="font-bold text-lg text-black mb-3">
+                Popular Comparisons:
+            </div>
+            <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
                 </div>
-                <div class="font-bold text-lg text-black mb-3">
-                    Popular Comparisons:
+                <div class="flex-1">
+                    <div class="font-normal text-sm">VS.</div>
                 </div>
-                <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
-                    </div>
-                    <div class="flex-1">
-                        <div class="font-normal text-sm">VS.</div>
-                    </div>
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
-                    </div>
-                    <div class="flex-1">
-                        <div class="font-normal text-sm">VS.</div>
-                    </div>
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
-                    </div>
-                    <div class="flex-1">
-                        <div class="font-normal text-sm">VS.</div>
-                    </div>
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
-                    </div>
-                    <div class="flex-1">
-                        <div class="font-normal text-sm">VS.</div>
-                    </div>
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
-                    </div>
-                    <div class="flex-1">
-                        <div class="font-normal text-sm">VS.</div>
-                    </div>
-                    <div class="flex-1">
-                        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="mt-5">
-                    <a href="javascript:void(0);" class="text-lg text-left font-medium py-1 pl-3 pr-14 rounded btn-bg-orange-500 duration-500 text-white inline-block w-auto relative" >Compare Yourself Now!<img src="<?php echo get_template_directory_uri(); ?>/images/compare-icon.png" alt="#" class="absolute right-3 top-0" /></a>
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
                 </div>
             </div>
+            <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
+                </div>
+                <div class="flex-1">
+                    <div class="font-normal text-sm">VS.</div>
+                </div>
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
+                </div>
+            </div>
+            <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
+                </div>
+                <div class="flex-1">
+                    <div class="font-normal text-sm">VS.</div>
+                </div>
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
+                </div>
+            </div>
+            <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
+                </div>
+                <div class="flex-1">
+                    <div class="font-normal text-sm">VS.</div>
+                </div>
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
+                </div>
+            </div>
+            <div class="flex items-center bg-white border rounded text-center py-1 px-3 mt-3 comparisons-hover">
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo1.png" alt="#" />
+                </div>
+                <div class="flex-1">
+                    <div class="font-normal text-sm">VS.</div>
+                </div>
+                <div class="flex-1">
+                    <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/images/compare-logo2.png" alt="#" />
+                </div>
+            </div>
+            <div class="mt-5">
+                <a href="javascript:void(0);" class="text-lg text-left font-medium py-1 pl-3 pr-14 rounded btn-bg-orange-500 duration-500 text-white inline-block w-auto relative" >Compare Yourself Now!<img src="<?php echo get_template_directory_uri(); ?>/images/compare-icon.png" alt="#" class="absolute right-3 top-0" /></a>
+            </div>
         </div>
-    </section>
-    <!-- compare and choose section end -->
+    </div>
+</section>
+<!-- compare and choose section end -->
     <!-- review section start -->
     <section class="review_sec md:py-16 py-14">
        <div class="container mx-auto">

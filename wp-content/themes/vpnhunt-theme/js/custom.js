@@ -49,7 +49,7 @@
     
       // Create a video element
       var video = document.createElement("video");
-      video.src = admin.site_url + "/wp-content/themes/vpnhunt-theme/js/vpnHunt.mp4"; // Replace with your video URL or path
+      video.src = front_urls.theme_url + "/videos/vpnHunt.mp4"; // Replace with your video URL or path
       video.loop = true;
       video.muted = true;
 
