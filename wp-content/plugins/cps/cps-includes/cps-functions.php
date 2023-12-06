@@ -120,3 +120,29 @@ function handle_delete_request() {
 	}
     wp_die();
 }
+
+add_action( 'wp_ajax_get_contact_data', 'handle_contact_data' );
+add_action( 'wp_ajax_nopriv_get_contact_data', 'handle_contact_data' );
+
+function handle_contact_data() {
+	  global $wpdb;
+    $id = $_REQUEST['id'];
+    $sql = "SELECT * FROM ". $wpdb->prefix ."contact_form WHERE id=". $id ."";
+    $result = $wpdb->get_results($sql);
+    print_r($result);
+    return;
+    if($wpdb->delete( $table, array( 'id' => $id ) )){
+		  $response = array(
+						        "returnType" => "true",
+						        "message"	 => "Record deleted successfully."
+					        );
+		echo json_encode($response);
+	}else{
+		$response = array(
+						          "returnType" => "false",
+						          "message"	 => "Record could not be submitted."
+					      );
+		echo json_encode($response);
+	}
+    wp_die();
+}

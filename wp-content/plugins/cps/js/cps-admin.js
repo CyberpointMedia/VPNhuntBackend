@@ -25,12 +25,31 @@ jQuery(function( $ ){
         });
 
         let table = new DataTable('.table');
-        $(".table").on('click', 'td', function() {
-            //get the initialization options
-            var columns = table.settings().init().columns;
-            //get the index of the clicked cell
-            var colIndex = table.cell(this).index().column;
-            alert('you clicked on the column with the name '+columns[colIndex].name);
+        $(".data_record").click(function() {
+            var id = $(this).data('id');
+            console.log(id);
+            $.ajax({
+            type : "POST",
+            dataType : "json",
+            url : ajax.url,
+            data : { 
+                "action": "get_contact_data",
+                "id": id
+            },
+            success: function(response) {
+                if(response.returnType == "true"){
+                    console.log(response);
+                    $("#contact-form").hide();
+                    $("#response").html(response.message);
+
+                }else if(response.returnType == "false"){
+                    console.log(response);
+                    $("#response").html(response.message);
+                
+                }
+            }
+        
+            });
         })
 
         $('#export-table').click(function () {
@@ -45,11 +64,6 @@ jQuery(function( $ ){
                 }
             });
         });
-
-        $("#btnExport").click(function () {
-            
-        });
-        
     });
     
 });
