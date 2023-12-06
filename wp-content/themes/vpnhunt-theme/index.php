@@ -360,7 +360,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/images/read-more-icon.png" alt="#" class="w-8 h-8"/>
                     </a>
                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog1.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
-                   <a href="javascript:void(0);" class="text-white">
+                   <a href="javascript:void(0);" class="<?php echo $count === 1 ? 'text-white' : 'text-black'; ?>">
                        <span class="block text-xs font-normal"><?php echo get_the_date(); ?> | by <?php echo get_the_author_meta( 'first_name', $author_id ); ?> </span>
                        <span class="block mt-2 text-2xl font-medium"><?php the_title() ?></a>
                    </a>
