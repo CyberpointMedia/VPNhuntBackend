@@ -345,9 +345,9 @@
                         $post_query = new WP_Query($args);
                         if ( $post_query->have_posts() ) : while ( $post_query->have_posts() ) : $post_query->the_post();
                         
-                        if    ($count === 1) :  $color = 'btn-black-dark';
-                        elseif($count === 2) :  $color = 'btn-orange-light-100';
-                        elseif($count === 3) :  $color = 'btn-voilet-light-300';
+                        if    ($count === 1) :  $color = 'bg-black-dark';
+                        elseif($count === 2) :  $color = 'bg-orange-light-100';
+                        elseif($count === 3) :  $color = 'bg-voilet-light-300';
                         elseif($count === 4) :  $color = 'bg-yellow-light-200';
                         elseif($count === 5) :  $color = 'bg-blue-dark-400';
                         elseif($count === 6) :  $color = 'bg-green-dark-400'; 
