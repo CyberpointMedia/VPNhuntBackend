@@ -131,6 +131,7 @@
         self.toggleClass("collapsed");
         self.next(".accordion-content").toggleClass("hidden");
       });
+      
 
       
       

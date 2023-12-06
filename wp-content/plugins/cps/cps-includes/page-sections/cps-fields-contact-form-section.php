@@ -82,40 +82,69 @@ add_action( 'admin_init', 'cps_contact_form_section' );
 function cps_contact_form_section_function() {
     global $wpdb;
     $result = $wpdb->get_results( "SELECT * FROM  `vwppn_contact_form`" );
-
+     ?>
+    <br/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"><?php esc_html_e( 'Contact Form Settings', 'cps' );?> </div>
+            <div class="col right-block">
+                <button id="export-table" type="button" class="btn btn-sm btn-outline-primary">Export to Excel</button>
+            </div>
+        </div>
+    </div>
     
-        
     
-    esc_html_e( 'Contact Form Settings', 'cps' ); ?>
-
-    <div class="alert alert-success" role="alert" style="display:none"></div>
+    <div class="container-fluid">
+        <table id="contact-form-queries" class="table table-striped">
+            <caption style="display:none;">Contact Form Leads</caption>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Create Date</th>
+                    <th scope="col">Update Date</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $count = 1; foreach ( $result as $contacts ){ ?>
+                <tr>
+                    <th scope="row"><?php echo $count; ?></th>
+                    <td data-first_name="<?php echo $contacts->first_name; ?>"><?php echo $contacts->first_name; ?></td>
+                    <td><?php echo $contacts->last_name; ?></td>
+                    <td><?php echo $contacts->email; ?></td>
+                    <td><?php echo $contacts->country_code . '-' .$contacts->phone_number; ?></td>
+                    <td><?php echo $contacts->create_date; ?></td>
+                    <td><?php echo $contacts->update_date; ?></td>
+                    <td><span class="dashicons dashicons-editor-expand" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></span></td>
+                </tr>
+                <?php $count++; } ?>
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            ...
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+        </div>
+    </div>
+    </div>
     
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Create Date</th>
-                <th scope="col">Update Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php $count = 1; foreach ( $result as $contacts ){ ?>
-            <tr>
-                <th scope="row"><?php echo $count; ?></th>
-                <td><?php echo $contacts->first_name; ?></td>
-                <td><?php echo $contacts->last_name; ?></td>
-                <td><?php echo $contacts->email; ?></td>
-                <td><?php echo $contacts->country_code . '-' .$contacts->phone_number; ?></td>
-                <td><?php echo $contacts->create_date; ?></td>
-                <td><?php echo $contacts->update_date; ?></td>
-            </tr>
-            <?php $count++; } ?>
-        </tbody>
-    </table>
+    
 <?php }
 
 function cps_contact_form_section_title_function() {
