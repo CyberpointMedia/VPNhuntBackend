@@ -79,8 +79,9 @@ body, p{
     background-color: #FF6961;
 }
 
-.btn-bg-orange-500:hover{
+.btn-bg-orange-500:hover, .hover-bg-red:hover{
     background-color: #D8423A;
+    color: #fff;
 }
 
 .hover-text:hover, .focus-text:focus, .hover-text.active{
@@ -111,15 +112,15 @@ body, p{
     background: #5DA283;
 }
 
-.btn-black-dark{
+.btn-black-dark, .bg-black-dark{
     background: #0D0E10;
 }
 
-.btn-orange-light-100{
+.btn-orange-light-100, .bg-orange-light-100{
     background: #EC8D71;
 }
 
-.btn-voilet-light-300{
+.bg-voilet-light-300{
     background: #938CE1;
 }
 
@@ -151,7 +152,7 @@ body, p{
     background: #5DA283;
 }
 
-.social-icons li a{
+.social-icons li a, ul li a.twitter-x{
     width: 28px;
     height: 28px;
     display: inline-block;
@@ -189,12 +190,38 @@ body, p{
     background-image: url(images/youtube-hover.svg);
 }
 
-.social-icons li a.twitter{
-    background-image: url(images/twitter.svg);
+.social-icons li a.twitter, .fab.fa-twitter-square{
+    background-image: url(images/twitter-x.svg);
 }
 
-.social-icons li a.twitter:hover{
-    background-image: url(images/twitter-hover.svg);
+.social-icons li a.twitter:hover, .fab.fa-twitter-square:hover{
+    background-image: url(images/twitter-x-hover.svg);
+}
+
+.fab.fa-twitter, .fab.fa-twitter.no-hover{
+    background-image: url(images/twitter-x1.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.fab.fa-twitter-square{
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.fab.fa-twitter:hover{
+    background-image: url(images/twitter-x-hover1.svg);
+}
+
+.fab.fa-twitter.no-hover{
+    background-image: url(images/twitter-x1.svg);
+}
+
+.fab.fa-twitter:before, .fab.fa-twitter-square:before{
+    content: "";;
 }
 
 .category-btn:hover{
@@ -220,9 +247,9 @@ body, p{
 }
 
 .vpnHunt-video video:hover::-webkit-media-controls-panel,
-.vpnHunt-video video:hover::-webkit-media-controls-play-button,
-.vpnHunt-video video:hover::-webkit-media-controls-timeline {
-    display: none !important;
+    .vpnHunt-video video:hover::-webkit-media-controls-play-button,
+    .vpnHunt-video video:hover::-webkit-media-controls-timeline {
+      display: none !important;
 }
 
 .fixed-header {
@@ -252,21 +279,17 @@ body, p{
     opacity: 0;
     visibility: hidden;
 }
-
 .text-right{
     text-align: right;
 }
-
 .review-box{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
 }
-
 .review-box span.inline-block img {
     width: 20px;
 }
-
 ul.slick-dots {
     text-align: center;
     position: absolute;
@@ -275,11 +298,9 @@ ul.slick-dots {
     bottom: -55px;
     transform: translate(-50%, -50%);
 }
-
 ul.slick-dots li {
     display: inline-block;
 }
-
 ul.slick-dots li button {
     display: inline-block;
     width: 12px;
@@ -289,7 +310,6 @@ ul.slick-dots li button {
     text-indent: -9999999px;
     margin: 0px 4px;
 }
-
 ul.slick-dots li.slick-active button{
     background: #00B67A;
 }
@@ -451,33 +471,45 @@ video{
 
 
 @media only screen and (min-width: 1536px) {
+
     .vpnHunt-video{
         bottom: -160px;
     }
+
 }
+
 @media only screen and (min-width: 1280px) and (max-width: 1366px) {
+    
     .about-top-bg {
         background-position: -160px -150px;
     }
+
 }
 @media only screen and (min-width: 1366px) {
+
     .about-top-bg {
         background-position: -160px -230px;
     }
+
 }
 @media (min-width: 1200px) {
+    
     .container{
         max-width: 1140px;
     }
+
 }
 @media only screen and (min-width: 1600px) {
+    
     .about-top-bg {
         background-position: -160px -270px;
     }
+
 }
 
 /* @media query start here */
 @media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    
     .vpnHunt-video{
         bottom: -80px;
     }
@@ -522,15 +554,12 @@ video{
 }
 
 @media (min-width: 768px) and (max-width:992px) {
-    
     .vpnHunt-video{
         bottom: -40px;
     }
-    
     button.slick-prev.slick-arrow{
         left: 42%;
     }
-    
     .about-top-bg {
         background-position: 0px 0px;
     }
@@ -549,11 +578,11 @@ video{
     button#mobile-menu-button #menu-icon-close {
         right: 30px;
     }
-
+    
     button.slick-next.slick-arrow {
         right: 18%;
     }
-
+    
     button.slick-prev.slick-arrow{
         left: 27%;
     }
@@ -561,7 +590,7 @@ video{
     .box-shadow:hover{
         margin-top: 0.5rem;
     }
-
+    
     .review-box span.inline-block img {
         width: 16px;
     }
