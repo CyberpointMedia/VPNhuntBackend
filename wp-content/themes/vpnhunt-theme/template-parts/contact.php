@@ -71,9 +71,9 @@
                         <div class="flex mb-4">
                             <!-- Country Code Input -->
                             <div class="relative">
-                                <select name="country_code" class="bg-white text-gray-700 text-base appearance-none border border-r-0 p-3 pr-3 rounded rounded-tr-none rounded-br-none focus:shadow-none focus:outline-none">
+                                <select id="country_code" name="country_code" class="bg-white text-gray-700 text-base appearance-none border border-r-0 p-3 pr-3 rounded rounded-tr-none rounded-br-none focus:shadow-none focus:outline-none">
                                     <option value="">--</option>
-                                    <option value="+1" >USA</option>
+                                    <option value="+1">USA</option>
                                     <option value="+44">UK</option>
                                     <option value="+91">India</option>
                                 </select>
@@ -83,7 +83,9 @@
                             </div>
                 
                             <!-- Phone Number Input -->
-                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="phone_number" type="number" placeholder="+1 (555) 000-0000">
+                            <div class="w-10 p-3 flex items-center justify-center bg-blue-lighter border text-base" id="telephone">-
+                            </div>
+                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="phone_number" type="text" placeholder="+1 (555) 000-0000">
                         </div>
 
                         <div class="mb-4">

@@ -100,5 +100,9 @@ jQuery(function( $ ){
             });
          }
       });
+   });
+   $("#country_code").change(function(){
+      var country_code = $("#country_code").val();
+      $("#telephone").html(country_code)
    })
 });
