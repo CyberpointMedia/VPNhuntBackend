@@ -1,18 +1,28 @@
 <?php
 wp_head(); ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="display:none">
         <!-- header start here -->
         <header class="relative">
-                <div class="topbar py-2 bg-gray-light-100 duration-500">
-                <div class="container">
-                        <div class="flex flex-wrap justify-between items-center text-center md:text-left">
-                        <p class="text-sm text-center lg:text-left w-full lg:w-2/3">We may receive a commission for purchases made through our links.<a href="javascript:void(0);" class="font-medium">Learn More</a></p>
-                        <p class="text-sm md-sm-none">Check out our video tutorials on <a href="javascript:void(0);" class="font-medium"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/youtube-icon.svg" alt="#" class="inline-block" />Youtube</a></p>
+                <div id="topbar" class="topbar py-2 bg-gray-light-100 duration-500">
+                        <div class="container">
+                                <div class="flex flex-wrap justify-between items-center text-center md:text-left">
+                                        <p class="text-sm text-center lg:text-left w-full lg:w-2/3">
+                                                We may receive a commission for purchases made through our links. 
+                                                <a href="javascript:void(0);" class="font-medium">
+                                                        Learn More
+                                                </a>
+                                        </p>
+                                        <p class="text-sm md-sm-none">
+                                                Check out our video tutorials on 
+                                                <a href="javascript:void(0);" class="font-medium">
+                                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/youtube-icon.svg" alt="#" class="inline-block" />Youtube
+                                                </a>
+                                        </p>
+                                </div>
                         </div>
                 </div>
-                </div>
-                <nav class="bg-white w-full z-20 top-0 start-0 border-b border-gray-200">
+                <nav class="bg-white w-full z-20 top-0 start-0 border-b border-gray-200 drop-shadow-md">
                         <div class="container">
                                 <div class="flex flex-wrap items-center justify-between py-4">
                                         <a href="javascript:void(0);" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -34,13 +44,13 @@ wp_head(); ?>
                                         </div>
                                         <?php 
                                                 $args = array(
-                                                        'theme_location' => 'header-menu',
-                                                        'container' => 'div',
-                                                        'container_class' => 'items-center justify-between duration-500 w-full lg:flex lg:w-auto lg:order-1',
-                                                        'container_id' => 'navbar-sticky',
-                                                        'menu_class' => 'flex flex-col p-4 lg:p-0 font-medium lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0'
-                                                        //'items_wrap' => '%3$s'
-                                                );
+                                                                'theme_location' => 'header-menu',
+                                                                'container' => 'div',
+                                                                'container_id' => 'navbar-sticky',
+                                                                'container_class' => 'items-center justify-between duration-500 w-full lg:flex lg:w-auto lg:order-1',
+                                                                'menu_class' => 'flex flex-col p-4 lg:p-0 font-medium lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0',
+                                                                'add_link_class'    => 'block p-3 text-black font-medium text-sm lg:p-0 hover:text-red-400'
+                                                        );
                                                 wp_nav_menu( $args ); 
                                         ?>
                                 </div>

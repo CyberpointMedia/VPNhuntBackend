@@ -4,6 +4,7 @@ function theme_setup(){
     
     //Add theme support for Title Tags
     add_theme_support( 'title-tag' );
+    add_theme_support( 'post-thumbnails', array( 'page' ) ); 
 
     //Add theme support for logo
     add_theme_support( 'custom-logo', array(
@@ -12,7 +13,7 @@ function theme_setup(){
     ) );
 
     //Add option for post thumbnails
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails', array( 'post', 'customposttypename' ) );
 
     //Add custom background
     add_theme_support( 'custom-background' );
@@ -26,7 +27,10 @@ function theme_setup(){
     
 }
 
+
 add_action('after_setup_theme','theme_setup');
+
+add_theme_support( 'post-thumbnails',array('page')); 
 
 //enqueue styles and scripts
 add_action( 'wp_enqueue_scripts', 'vpnhunt_enqueue_scripts' );
@@ -35,8 +39,9 @@ function vpnhunt_enqueue_scripts() {
     //enqueue styles
     wp_enqueue_style(   'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', array(), '5.15.3' );
     wp_enqueue_style(   'slick', get_stylesheet_directory_uri() . '/css/slick.css', array(), '1.0' );
-    wp_enqueue_style(   'style', get_stylesheet_directory_uri() . '/css/tailwind-styles.css', array(), '1.0' );
-    wp_enqueue_style(   'theme-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0' );
+    wp_enqueue_style(   'tailwind-style', get_stylesheet_directory_uri() . '/css/style.css', array(), '1.0' );
+    wp_enqueue_style(   'custom', get_stylesheet_directory_uri() . '/css/custom.css', array(), '1.0' );
+    wp_enqueue_style(   'stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '1.0' );
     
     //enqueue scripts
     if (is_page('contact') || is_page('about-us')) {
@@ -408,6 +413,7 @@ add_action ( 'edited_category', function( $term_id ) {
 });
 
 remove_filter( 'the_excerpt', 'wpautop' );
+remove_filter( 'the_content', 'wpautop' );
 
 //making the meta box (Note: meta box != custom meta field)
 function wpse_add_custom_meta_box_2() {
