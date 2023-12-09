@@ -8,11 +8,12 @@
             }
             ?>
     <!-- footer start here -->
-    <footer class="bg-fixed bg-cover md:py-16 py-14" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/gray-bg.png');">
+    <footer class="bg-gray-light-100 md:py-14 py-14">
         <div class="container mx-auto">
             <div class="lg:flex justify-between align-middle border-b pb-3">
                 <div class="relative">
-                    <span class="lg:absolute left-0 top-0"><img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png" alt="#" class="inline-block"/></span>
+                    <span class="lg:absolute left-0 top-0">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png" alt="#" class="inline-block"/></span>
                     <p class="lg:pl-14 text-base font-medium"><?php echo $footer_logo_des; ?></p>
                 </div>
                 <ul class="flex space-x-3 mt-3 lg:mt-0 lg:ml-8 social-icons">

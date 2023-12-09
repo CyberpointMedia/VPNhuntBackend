@@ -17,28 +17,28 @@
             </div>
             <div class="flex flex-wrap align-middle content-center">
                 <div class="md:w-2/4 w-full">
-                    <div class="mb-7">
+                    <div class="mb-9">
                         <h3 class="font-medium text-2xl text-black">Call Us</h3>
                         <p class="my-1">Call our team Mon-Fri from 8am to 5pm.</p>
-                        <div class="flex items-center mt-3">
-                            <i class="fas fa-phone rotate-90 mr-3"></i>
+                        <div class="flex items-center mt-4">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/phone-icon.svg" alt="#" class="inline-block mr-3">
                             <h4 class="text-lg font-medium leading-6 text-black"><?php echo $contact_number; ?>
                         </div>
                         </h4>
                     </div>
                     <div class="mb-4">
                         <h3 class="font-medium text-2xl text-black">Chat with us</h3>
-                        <p class="my-1">Speak to our friendly team via live chat</p>
-                        <div class="flex items-center mt-3">
-                            <i class="far fa-comment mr-3"></i>
+                        <p class="mt-2">Speak to our friendly team via live chat</p>
+                        <div class="flex items-center mt-4">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/comment.svg" alt="#" class="inline-block mr-3">
                             <h4 class="text-lg font-medium leading-6 text-black">Start a live chat
                         </div>
-                        <div class="flex items-center mt-3">
-                            <i class="far fa-paper-plane mr-3"></i>
+                        <div class="flex items-center mt-4">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/send.svg" alt="#" class="inline-block mr-3">
                             <h4 class="text-lg font-medium leading-6 text-black">Shoot us an email
                         </div>
-                        <div class="flex items-center mt-3">
-                            <i class="fab fa-twitter mr-3"></i>
+                        <div class="flex items-center mt-4">
+                            <i class="fab fa-twitter no-hover mr-3"></i>
                             <h4 class="text-lg font-medium leading-6 text-black">Message us on Twitter
                         </div>
                         </h4>
@@ -85,7 +85,7 @@
                             <!-- Phone Number Input -->
                             <div class="w-10 p-3 flex items-center justify-center bg-blue-lighter border text-base" id="telephone">-
                             </div>
-                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none" name="phone_number" type="text" placeholder="+1 (555) 000-0000">
+                            <input class="w-full p-3 text-base leading-tight text-gray-700 border rounded appearance-none focus:shadow-none focus:outline-none border-l-0 rounded-tl-none rounded-bl-none" name="phone_number" type="text" placeholder="+1 (555) 000-0000">
                         </div>
 
                         <div class="mb-4">

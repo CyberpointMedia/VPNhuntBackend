@@ -95,7 +95,11 @@
 
 
   // slider for mobile start
+  $(window).load(function(){
+    $('body').slideDown(10);
+  });
   $(document).ready(function(){
+   
     $('.slider').slick({
         slidesToShow: 3,
         arrows: false,
@@ -131,13 +135,6 @@
         self.toggleClass("collapsed");
         self.next(".accordion-content").toggleClass("hidden");
       });
-
-      $("#navbar-sticky ul li a").addClass('block p-3 text-black font-medium text-sm lg:p-0 hover:text-red-400');
-
-      
-
-      
-      
   });
   // slider for mobile end
 
