@@ -65,26 +65,26 @@ get_header(); ?>
             </div>
             <div class="flex lg:flex-row flex-col flex-wrap content-center relative items-center">
                 <div class="lg:w-2/4 w-full text-right hidden md:block">
-                    <img class="inline-block lg:-mr-28" src="images/expertise.svg" alt="#" />
+                    <img class="inline-block lg:-mr-28" src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise.svg" alt="#" />
                 </div>
                 <div class="lg:w-2/4 w-full content-center lg:absolute right-0 bottom-0 lg:pl-0">
                     <div class="grid grid-cols-2 gap-0">
                         <div class="lg:px-8 px-4 pt-4 md:pt-8 lg:pb-36 pb-28 w-full rounded-tl-2xl relative bg-gray-light-200 overflow-hidden">
-                            <div class="absolute -right-5 -bottom-4 w-28 h-40 bg-contain bg-no-repeat" style="background-image: url(images/bg-shape1.svg);"></div>
+                            <div class="absolute -right-5 -bottom-4 w-28 h-40 bg-contain bg-no-repeat" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg-shape1.svg);"></div>
                             <p class="font-bold text-4xl md:text-5xl mb-2">35+</p>
                             <p class="text-sm md:text-base">VPNs Tested</p>
                         </div>
                         <div class="lg:px-8 px-4 lg:pt-36 pt-28 w-full relative text-white bg-green-dark-500 overflow-hidden">
-                            <div class="absolute -left-6 -top-6 w-36 h-36 bg-contain bg-no-repeat" style="background-image: url(images/bg-shape2.svg);"></div>
+                            <div class="absolute -left-6 -top-6 w-36 h-36 bg-contain bg-no-repeat" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg-shape2.svg);"></div>
                             <p class="font-bold text-4xl md:text-5xl mb-2">$40k</p>
                             <p class="text-sm md:text-base">Money Invested Of Testing</p>
                         </div>
                         <div class="lg:px-8 px-4 lg:pt-36 pt-28 w-full relative text-white bg-blue-dark-400 overflow-hidden">
-                            <div class="absolute -left-10 -top-3 w-44 h-24 bg-contain bg-no-repeat" style="background-image: url(images/bg-shape3.svg);"></div>
+                            <div class="absolute -left-10 -top-3 w-44 h-24 bg-contain bg-no-repeat" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg-shape3.svg);"></div>
                             <p class="font-bold text-4xl md:text-5xl mb-2">16k+</p>
                             <p class="text-sm md:text-base">Total Hours of Testing</p>
                         </div>
-                        <div class="lg:px-8 px-4 pt-4 md:pt-8 lg:pb-32 pb-28 w-full relative" style="background-image: url(images/bg-shape4.svg); background-repeat: no-repeat; background-size: cover;">
+                        <div class="lg:px-8 px-4 pt-4 md:pt-8 lg:pb-32 pb-28 w-full relative" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg-shape4.svg); background-repeat: no-repeat; background-size: cover;">
                             <p class="font-bold text-4xl md:text-5xl mb-2">100k+</p>
                             <p class="text-sm md:text-base">Happy Customers From Our Sites</p>
                         </div>
@@ -191,8 +191,8 @@ get_header(); ?>
                     <!-- team member 3 -->
                     <div class="py-5 px-4">
                         <div class="rounded-lg pt-8 relative bg-white-100">
-                            <a href="javascript:void(0);" class="absolute right-3 top-3"><img src="images/read-more-icon-black.svg" alt="#" class="w-8 h-8"></a>
-                            <img src="images/team-member3.svg" alt="#" />
+                            <a href="javascript:void(0);" class="absolute right-3 top-3"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/read-more-icon-black.svg" alt="#" class="w-8 h-8"></a>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/team-member3.svg" alt="#" />
                         </div>
                         <h3 class="font-medium text-2xl my-3">Brooklyn Simmons</h3>
                         <p>Head of Research</p>
