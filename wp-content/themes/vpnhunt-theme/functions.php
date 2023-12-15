@@ -487,4 +487,7 @@ function wpse_save_meta_fields( $post_id ) {
   add_action( 'save_post', 'wpse_save_meta_fields' );
   add_action( 'new_to_publish', 'wpse_save_meta_fields' );
 
-define('THEME_DIR', get_stylesheet_directory_uri());
+global $shortcode_tags;
+echo '<pre>'; 
+print_r($shortcode_tags); 
+echo '</pre>';
