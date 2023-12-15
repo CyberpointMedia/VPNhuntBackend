@@ -78,7 +78,7 @@
     <!-- page link start -->
     <section class="page-link">
         <div class="container">
-            <div class="flex flex-wrap flex-col md:flex-row items-center text-left md:mt-0 mt-5">
+            <div class="flex flex-wrap md:flex-wrap-reverse md:flex-row items-center text-center md:text-left md:mt-0 mt-5 py-5 justify-between">
                 <p class="font-medium text-base">VPN Guides:</p>
                 <ul class="flex w-4/5 overflow-x-auto horizontal-scroll md:ml-10">
                     <li class="">
@@ -355,7 +355,7 @@
                                         </p>
                                     </div>
                                     <div class="w-1/5 hidden md:block">
-                                        <img src="<?php echo get_stylesheet_uri(); ?>/images/logo-icon.svg" alt="#" />
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-icon.svg" alt="#" />
                                     </div>
                                 </div>
                                 <div class="flex flex-col md:flex-row flex-wrap my-5 md:space-x-5 xl:space-x-10 md:space-y-0 space-y-5">
@@ -367,7 +367,7 @@
                                         </p>
                                     </div>
                                     <div class="flex flex-wrap items-start">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>images/stopwatch-icon.svg" alt="#" class="mr-1" />
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/stopwatch-icon.svg" alt="#" class="mr-1" />
                                         <p>
                                             <b class="font-bold block mb-1">16,000</b>
                                             <span class="text-base">Total Hours of Testing</span>
@@ -808,7 +808,7 @@
                 <!-- blog 1 -->
                <div class="bg-black-dark rounded-lg px-5 pb-8 md:pt-12 pt-8 relative blogs-col">
                    <a href="javascript:void(0);" class="absolute right-3 top-3">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>images/read-more-icon-white.svg" alt="#" class="w-8 h-8"/>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/read-more-icon-white.svg" alt="#" class="w-8 h-8"/>
 					</a>
                    		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blog1.png" alt="#" class="mx-auto w-40 h-32 mb-5"/>
                    <a href="javascript:void(0);" class="text-white">

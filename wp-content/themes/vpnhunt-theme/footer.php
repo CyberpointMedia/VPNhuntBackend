@@ -53,5 +53,12 @@
         </div>
     </footer>
     <!-- footer end here -->
+
+
 </body>
-<?php wp_footer(); ?>
+<?php wp_footer(); 
+    global $shortcode_tags;
+    echo '<pre>'; 
+    print_r($shortcode_tags); 
+    echo '</pre>';
+?>
