@@ -360,7 +360,7 @@
                     <?php if($count == 6){ $count =0; } $count++; endwhile; endif; ?>
                 </div>
             <div class="text-center my-8">
-                <a href="javascript:void(0);" class="btn-bg-orange-500 duration-500 rounded text-white font-medium py-1 px-3 inline-block">See All Guides</a>
+                <a href="<?php echo get_the_permalink(193) ?>" class="btn-bg-orange-500 duration-500 rounded text-white font-medium py-1 px-3 inline-block">See All Guides</a>
             </div>
         </div>
     </section>
