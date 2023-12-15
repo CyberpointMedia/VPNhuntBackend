@@ -62,7 +62,7 @@
                 </li>
                 <?php $count_pages = wp_count_posts( $post_type = 'guides' );?>
                 <li>
-                    <a href="javascript:void(0);" class="flex items-center justify-center px-3 h-8 w-8 leading-tight font-medium text-sm bg-red-400 text-white rounded-full hover:bg-red-400 hover:text-white duration-300 mx-1"><?php print_r($count_pages); ?></a>
+                    <a href="javascript:void(0);" class="flex items-center justify-center px-3 h-8 w-8 leading-tight font-medium text-sm bg-red-400 text-white rounded-full hover:bg-red-400 hover:text-white duration-300 mx-1"><?php //print_r($count_pages); ?></a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="flex items-center justify-center px-3 h-8 w-8 leading-tight text-black font-medium text-sm bg-white rounded-full hover:bg-red-400 hover:text-white duration-300 mx-1">2</a>
