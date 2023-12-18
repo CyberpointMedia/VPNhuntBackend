@@ -48,6 +48,7 @@ include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-face-off-section.p
 include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-why-trust-section.php');
 
 include( CPS_URL . 'cps/cps-includes/page-sections/cps-fields-contact-form-section.php');
+include( CPS_URL . 'cps/cps-includes/page-sections/cps-modal.php');
 
 function cps_settings(){
     if( !current_user_can('manage_options')){
@@ -318,3 +319,13 @@ function jal_install() {
 register_activation_hook( __FILE__, 'jal_install' );
 
 
+function loadMyBlock() {
+    wp_enqueue_script(
+      'cps-shortcode-inserter-i',
+      'http://' .CPS_URL . 'cps/js/cps-shortcode-inserter.js',
+      array('wp-blocks','wp-editor'),
+      true
+    );
+  }
+     
+  add_action('enqueue_block_editor_assets', 'loadMyBlock');

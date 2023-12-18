@@ -173,5 +173,9 @@
         }
     }); 
   });
+
+  registerBlockType( 'my-block/cool-block-name', {
+    // ... Massive JS object
+  })
   
 })(this.jQuery);
