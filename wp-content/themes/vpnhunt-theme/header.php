@@ -48,7 +48,7 @@ wp_head(); ?>
                                                                 'container' => 'div',
                                                                 'container_id' => 'navbar-sticky',
                                                                 'container_class' => 'items-center justify-between duration-500 w-full lg:flex lg:w-auto lg:order-1',
-                                                                'menu_class' => 'flex flex-col p-4 lg:p-0 font-medium lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0',
+                                                                'menu_class' => 'flex flex-col p-4 lg:p-0 font-medium lg:space-x-10 rtl:space-x-reverse lg:flex-row lg:mt-0',                                                                                 
                                                                 'add_link_class'    => 'block p-3 text-black font-medium text-sm lg:p-0 hover:text-red-400'
                                                         );
                                                 wp_nav_menu( $args ); 
