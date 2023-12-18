@@ -413,7 +413,66 @@ add_action ( 'edited_category', function( $term_id ) {
 remove_filter( 'the_excerpt', 'wpautop' );
 remove_filter( 'the_content', 'wpautop' );
 
-add_shortcode( 'baztag', 'wpdocs_baztag_func' );
-function wpdocs_baztag_func( $atts, $content = "" ) {
-	return 900;
+
+
+/**
+ * Register meta boxes.
+ */
+function guides_register_meta_boxes() {
+    add_meta_box( 'guides-1', __( 'Extra Meta Fields', 'guides' ), 'guides_display_callback', 'guides' );
 }
+add_action( 'add_meta_boxes', 'guides_register_meta_boxes' );
+
+/**
+ * Meta box display callback.
+ *
+ * @param WP_Post $post Current post object.
+ */
+function guides_display_callback( $post ) {
+        //var_dump(str_contains($post->post_name, 'guide'));
+        if(str_contains($post->post_name, 'guide') === true){
+            get_template_part('template-parts/guides-form');
+        }
+        
+}
+
+function guides_save_meta_box( $post_id ) {
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( $parent_id = wp_is_post_revision( $post_id ) ) {
+        $post_id = $parent_id;
+    }
+    $fields = [
+                'overall_rating',
+                'expert_review_link',
+                'cheapest_price',
+                'pay_monthly_price',
+                'free_trial',
+                'money_back_guarantee',
+                'data_cap',
+                'logging_policy',
+                'data_leaks',
+                'encryption',
+                'jurisdiction',
+                'average_local_download_speed',
+                'servers',
+                'ip_addresses',
+                'countries',
+                'us_netflix',
+                'streaming_services_nblocked',
+                'torrenting',
+                'simultaneous_connections',
+                'native_app_support',
+                'compatible_via_router',
+                'smart_dns',
+                'kill_switch',
+                'browser_extensions',
+                'works_in_china',
+                'support' 
+                ];
+    foreach ( $fields as $field ) {
+        if ( array_key_exists( $field, $_POST ) ) {
+            update_post_meta( $post_id, $field, sanitize_text_field( $_POST[$field] ) );
+        }
+     }
+}
+add_action( 'save_post', 'guides_save_meta_box' );
