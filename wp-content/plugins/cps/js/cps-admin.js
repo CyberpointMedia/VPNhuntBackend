@@ -65,5 +65,9 @@ jQuery(function( $ ){
             });
         });
     });
+
+   
+    $("#dialogue .modal-body").html('Hello');
+    $('#dialogue').modal('show');
     
 });
