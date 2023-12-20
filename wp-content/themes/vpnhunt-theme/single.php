@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); the_content(); ?>
 
     <!-- top banner start here -->
     <section class="top-bg bg-center bg-cover" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/contact-bg.png'); background-size: cover; background-repeat: no-repeat;">

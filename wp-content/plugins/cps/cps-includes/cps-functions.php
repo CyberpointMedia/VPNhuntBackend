@@ -147,4 +147,37 @@ function handle_contact_data() {
     wp_die();
 }
 
+add_action('media_buttons', 'add_my_media_button');
+function add_my_media_button() {
+  echo '<button type="button" id="shortcode-inserter" class="button" data-title="Guides" data-close="Close">Short Code Inserter</button>';
+}
 
+function wpdocs_custom_admin_footer_text() {
+  $html = '<!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control form-control-sm" id="guideName" placeholder="Search guide">
+                        <label for="floatingInput">Search Guides</label>
+                      </div>
+                    </form>
+                    <div id="guidesResponseHTML"></div>
+                    <hr>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>';
+
+    return $html;
+}
+add_filter( 'admin_footer_text', 'wpdocs_custom_admin_footer_text' );
