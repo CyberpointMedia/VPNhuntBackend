@@ -53,7 +53,6 @@ jQuery(function( $ ){
         })
 
         $('#export-table').click(function () {
-           // var $row = table.row( this ).data();
             var table_name = $('table caption').html();
           
             let table = document.getElementsByTagName("table");
@@ -67,7 +66,87 @@ jQuery(function( $ ){
     });
 
    
-    $("#dialogue .modal-body").html('Hello');
-    $('#dialogue').modal('show');
     
+
+    $("#shortcode-inserter").on("click", function(){
+        let title = $(this).data('title');
+        let closeButtonTitle = $(this).data('close');
+        $("#staticBackdrop .modal-title").html(title);
+        $('#staticBackdrop').modal('show');
+    });
+    
+    $("#guideName").on("keyup", function(){
+        newTitle = $(this).val();
+        setTimeout(function(){
+            $("#guidesResponseHTML").html(newTitle);
+        //     $.ajax({
+        //         type : "POST",
+        //         dataType : "json",
+        //         url : ajax.url,
+        //         data : { 
+        //             "action": "get_contact_data",
+        //             "id": id
+        //         },
+        //         success: function(response) {
+        //             if(response.returnType == "true"){
+        //                 console.log(response);
+        //                 $("#contact-form").hide();
+        //                 $("#response").html(response.message);
+    
+        //             }else if(response.returnType == "false"){
+        //                 console.log(response);
+        //                 $("#response").html(response.message);
+                    
+        //             }
+        //         }
+            
+        //     });
+         }, 3000);
+        
+        
+    })
+
 });
+
+wp.blocks.registerBlockType('brad/border-box', {
+    
+    title: 'Simple Box',
+    icon: 'smiley',
+    category: 'common',
+    attributes: {
+      content: {type: 'string'},
+      color: {type: 'string'}
+    },
+    
+  /* This configures how the content and color fields will work, and sets up the necessary elements */
+    
+    edit: function(props) {
+      function updateContent(event) {
+        props.setAttributes({content: event.target.value})
+      }
+      function updateColor(value) {
+        props.setAttributes({color: value.hex})
+      }
+
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "h3",
+          null,
+          "Simple Boxs"
+        ),
+        React.createElement("input", { type: "text", value: props.attributes.content, onChange: updateContent }),
+        React.createElement(wp.components.ColorPicker, { color: props.attributes.color, onChangeComplete: updateColor })
+      );
+    },
+    save: function(props) {
+      return wp.element.createElement(
+        
+        "h3",
+        { style: { border: "3px solid " + props.attributes.color } },
+        props.attributes.content
+      );
+    }
+  });
+

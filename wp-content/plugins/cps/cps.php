@@ -319,13 +319,3 @@ function jal_install() {
 register_activation_hook( __FILE__, 'jal_install' );
 
 
-function loadMyBlock() {
-    wp_enqueue_script(
-      'cps-shortcode-inserter-i',
-      'http://' .CPS_URL . 'cps/js/cps-shortcode-inserter.js',
-      array('wp-blocks','wp-editor'),
-      true
-    );
-  }
-     
-  add_action('enqueue_block_editor_assets', 'loadMyBlock');
