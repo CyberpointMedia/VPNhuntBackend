@@ -155,21 +155,27 @@ function add_my_media_button() {
 function wpdocs_custom_admin_footer_text() {
   $html = '<!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <form>
-                      <div class="form-floating mb-3">
+                    
+                      <div class=" mb-3">
+                        <label for="inputPassword5" class="form-label">Search Guides</label>
                         <input type="text" class="form-control form-control-sm" id="guideName" placeholder="Search guide">
-                        <label for="floatingInput">Search Guides</label>
+                        <button type="button" class="btn btn-sm btn-outline-dark pull-right mt-2">Search</button>
                       </div>
-                    </form>
-                    <div id="guidesResponseHTML"></div>
+                       
+                    
+                    <div id="guidesResponseHTML">
+                    </div>
                     <hr>
+                    <div id="guidesIDResponseHTML">
+                      
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -181,3 +187,83 @@ function wpdocs_custom_admin_footer_text() {
     return $html;
 }
 add_filter( 'admin_footer_text', 'wpdocs_custom_admin_footer_text' );
+
+add_action( 'wp_ajax_get_guides', 'handle_guides_data' );
+add_action( 'wp_ajax_nopriv_get_guides', 'handle_guides_data' );
+
+function handle_guides_data() {
+    
+    global $wpdb;
+    $guide_name = $_REQUEST['data'];
+    $sql = "SELECT ID, post_title FROM ". $wpdb->prefix ."posts WHERE post_type = 'guides' AND post_title LIKE '%". $guide_name ."%' LIMIT 5";
+    $result = $wpdb->get_results($sql);
+
+    $count = 0;
+   foreach($result as $key=>$value){
+     
+        $data[$count]['list_id'] = $value->ID;
+        $data[$count]['list_text'] = $value->post_title;
+        $count++;
+      
+    }
+    if($result){
+		  $response = array(
+						        "returnType" => "true",
+						        "message"	 => count($result) ." Records found matching your query",
+                    "data" => $data
+					        );
+		
+	  }else{
+		  $response = array(
+						          "returnType" => "false",
+						          "message"	 => "There are no guides matching your query."
+					      );
+	  }
+    echo json_encode($response);
+    wp_die();
+}
+
+add_action( 'wp_ajax_get_guide_meta', 'handle_guide_meta_data' );
+add_action( 'wp_ajax_nopriv_get_guide_meta', 'handle_guide_meta_data' );
+
+function handle_guide_meta_data() {
+
+    $result = get_post_meta( $_REQUEST['data']);
+    //print_r($result);
+    $data = [];
+    $count = 0;
+   
+    foreach($result as $key=>$value){
+     
+        $data[$count]['list_id'] = $key;
+        $data[$count]['list_text'] =  ucwords(str_replace('_', ' ', $key)) . ': <span class="fw-bold" data-key="' .wp_strip_all_tags($key). '">' . $value[0]. '</span><br/><span class="shortcode"</span>';
+        $count++;
+      
+    }
+    if($data){
+		  $response = array(
+						        "returnType" => "true",
+						        "message"	 => $count ." Meta options found for this post",
+                    "data" => $data
+					        );
+		
+	  }else{
+		  $response = array(
+						          "returnType" => "false",
+						          "message"	 => "There are no guides matching your query."
+					      );
+	  }
+    echo json_encode($response);
+    wp_die();
+}
+
+function btn_shortcode( $atts, $content = null ) {
+ 
+  $a = shortcode_atts( array(
+      'guide-id' => $atts['guide-id'],
+      'guide-meta-key' => $atts['guide-meta-key']
+  ), $atts );
+  $get_post_meta = get_post_meta( $atts['guide-id'], $atts['guide-meta-key'], true);
+  return $get_post_meta;
+}
+add_shortcode( 'display-guide-attributes', 'btn_shortcode' );

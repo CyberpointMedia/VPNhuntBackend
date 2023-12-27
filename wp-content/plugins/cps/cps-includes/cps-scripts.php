@@ -4,6 +4,7 @@
 function cps_admin_scripts() {
     
     wp_enqueue_script( "cps-bootstrap", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", array('wp-blocks', 'wp-editor', 'jquery'), time() );
+    
     wp_enqueue_script( "cps-datatable", "//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js", array('cps-bootstrap'), time() );
     wp_enqueue_script( "cps-jquery-validate", "/wp-content/plugins/cps/js/jquery.validate.min.js", array('cps-datatable'), time() );
     wp_enqueue_script( "cps-table-to-excel", "https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js", array('cps-datatable'), time() );
