@@ -1,5 +1,7 @@
+
 jQuery(function( $ ){
     $(document).ready(function(){
+    const ajax_url = ajax.url;
     $("#newsletter").validate({
         rules: {
                 email: {
@@ -27,7 +29,7 @@ jQuery(function( $ ){
         let table = new DataTable('.table');
         $(".data_record").click(function() {
             var id = $(this).data('id');
-            console.log(id);
+            
             $.ajax({
             type : "POST",
             dataType : "json",
@@ -75,36 +77,85 @@ jQuery(function( $ ){
         $('#staticBackdrop').modal('show');
     });
     
-    $("#guideName").on("keyup", function(){
-        newTitle = $(this).val();
-        setTimeout(function(){
-            $("#guidesResponseHTML").html(newTitle);
-        //     $.ajax({
-        //         type : "POST",
-        //         dataType : "json",
-        //         url : ajax.url,
-        //         data : { 
-        //             "action": "get_contact_data",
-        //             "id": id
-        //         },
-        //         success: function(response) {
-        //             if(response.returnType == "true"){
-        //                 console.log(response);
-        //                 $("#contact-form").hide();
-        //                 $("#response").html(response.message);
+    $(document).on("keyup", "#guideName", function(){
+        wordpress_function = 'get_guides';
+        var ajax_data = [];
+        ajax_url = ajax.url;
+        ajax_data = $(this).val();   
+             
+        response = ajaxRequest(3000, wordpress_function, ajax_data, 'guidesResponseHTML');
+    });
     
-        //             }else if(response.returnType == "false"){
-        //                 console.log(response);
-        //                 $("#response").html(response.message);
-                    
-        //             }
-        //         }
-            
-        //     });
-         }, 3000);
+    $(document).on('click', "#guidesResponseHTML .list-group-item", function(){
+      $('.list-group-item').removeClass('bg-secondary text-white' );
+      $(this).addClass('bg-secondary text-white', 1000);
+      wordpress_function = 'get_guide_meta';
+      var ajax_data = [];
+      ajax_url = ajax.url;
+      ajax_data = $(this).data('id');        
+      response = ajaxRequest(3000, wordpress_function, ajax_data, 'guidesIDResponseHTML');
+    });
+
+
+    function ajaxRequest(timeout, wordpress_function, ajax_data, container){
+      
+        url = ajax_url; 
+        let ajax_response = null;
+          $.ajax({
+            type : "POST",
+            dataType : "json",
+            url : url,
+            'async':false,
+            data : { 
+              "action": wordpress_function,
+              "data": ajax_data
+            },
+            success: function(response) {
+              ajax_response = response;
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+              ajax_response = "There was an error while fetching data";
+            } 
+    
+          });
+       
         
+        responseListing(ajax_response, container);
+    }
+
+    function responseListing(response, div_id){
+      $("#"+div_id).html('');
+      var list = "", responseDiv = "";
+      if(response.data && response.returnType == 'true'){
+        count = 1; 
+        for(var i = 0; i < response.data.length; i++ ){
+          list +='<li data-id="' + response.data[i].list_id + '" class="list-group-item copy">'+ count +'. ' + response.data[i].list_text + '</li>';
+          count++;
+        }
         
-    })
+        responseDiv   += '<div class="response">';
+        responseDiv   +=   '<div class="success">' + response.message + '</div>';
+        responseDiv   +=    '<ul class="list-group list-group-flush">'+ list +'</ul>';
+        responseDiv   +=   '</div>';
+        
+      }else if(response.returnType == 'false'){
+        responseDiv   += '<div class="response">';
+        responseDiv   +=   '<div class="text-danger"><i>' + response.message + '</i></div>';
+        responseDiv   +=   '</div>';
+      
+      }
+      $("#"+div_id).html(responseDiv);
+    }
+
+    $(document).on('click', '#guidesIDResponseHTML .copy', function(){
+      var guide_id = $("#guidesResponseHTML li.list-group-item").data('id');
+      var guide_meta_key = $(this).data('id');
+      console.log(guide_id);
+      var shortcode = "[display-guide-attributes guide-id='" + guide_id + "' guide-meta-key='" + guide_meta_key + "']";
+      $(this).find('.shortcode').html(shortcode);
+
+    });
+    
 
 });
 
@@ -149,4 +200,3 @@ wp.blocks.registerBlockType('brad/border-box', {
       );
     }
   });
-

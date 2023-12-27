@@ -10,7 +10,7 @@
                     <?php echo $cps_hero_section_settings['section_title']; ?>
                 </h1>
                 <p class="text-lg font-normal my-5"><?php echo $cps_hero_section_settings['section_description']; ?></p>
-            </div>
+        -1    </div>
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4 justify-center text-center mt-8">
                 
                 <!-- card 1 start -->
@@ -344,7 +344,7 @@
                         elseif($count === 3) :  $color = 'bg-voilet-light-300';
                         elseif($count === 4) :  $color = 'bg-yellow-light-200';
                         elseif($count === 5) :  $color = 'bg-blue-dark-400';
-                        elseif($count === 6) :  $color = 'bg-green-dark-400'; 
+                        elseif($count === 6) :  $color = 'bg-green-dark-400';
                         endif;
                         $author_id = get_post_field( 'post_author', get_the_id() ); ?>
                 <!-- blog <?php echo $count; ?> -->
