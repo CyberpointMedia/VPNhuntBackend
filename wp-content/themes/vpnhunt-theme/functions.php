@@ -48,7 +48,7 @@ function vpnhunt_enqueue_scripts() {
     wp_enqueue_script(  'additional-methods', get_stylesheet_directory_uri() . '/js/additional-methods.min.js', array( 'jquery-validate' ), '1.0', true );
     wp_enqueue_script(  'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script(  'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'slick' ), '1.0', true );
-    wp_localize_script( 'custom', 'front_urls', array( 'theme_url' => get_site_url() . '/wp-content/themes/vpnhunt-theme') );
+    wp_localize_script( 'custom', 'front_urls', array( 'theme_url' => get_site_url() . '/wp-content/themes/vpnhunt-theme', 'ajaxUrl' => admin_url( 'admin-ajax.php') ) );
     
 
 }
@@ -476,3 +476,149 @@ function guides_save_meta_box( $post_id ) {
      }
 }
 add_action( 'save_post', 'guides_save_meta_box' );
+
+
+add_action( 'wp_ajax_get_guide', 'get_guide_meta_js' );
+add_action( 'wp_ajax_nopriv_get_guide', 'get_guide_meta_js' );
+
+function get_guide_meta_js() {
+    $post_type = $_REQUEST['data'];
+	$args = array(
+        'numberposts'      => 5,
+        'orderby'     => 'ID',
+        'order' => 'ASC',
+		'include'          => array(211, 214, 263, 265, 267),
+		'post_type'        => $post_type,
+		'suppress_filters' => true,
+      );
+
+      $posts = get_posts( $args );
+
+	if($posts){
+		$response = array(
+						"returnType" => "true",
+						"message"	 => "You details have been submitted.",
+                        "data" => $posts
+					);
+		echo json_encode($response);
+	}else{
+		$response = array(
+						"returnType" => "false",
+						"message"	 => "Your details could not be submitted."
+					);
+		echo json_encode($response);
+	}
+    wp_die();
+}
+
+add_action( 'wp_ajax_get_comparison_table', 'get_comparison_template_data' );
+add_action( 'wp_ajax_nopriv_get_comparison_table', 'get_comparison_template_data' );
+
+function get_comparison_template_data() {
+    $include_posts = $_REQUEST['data'];
+    $post_type = $_REQUEST['data']['post_type'];
+	$args = array(
+        'numberposts'      => 5,
+		'order'            => 'ASC',
+		'include'          => $_REQUEST['data']['include_posts'],
+		'post_type'        => $post_type,
+        
+    );
+
+
+        $posts = get_posts( $args );
+        $count = 1;
+        $headings = [];
+        $rows = [];
+        $table = [];
+        foreach($posts as $post){
+            $headers = '<th class="py-2 px-3 text-base font-medium text-center border">';
+            $headers .=          '<div class="product-box p-5 relative">';
+            $headers .=            '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 22" fill="none" class="close-icon mx-auto absolute right-0 top-0">';
+            $headers .=              '<path d="M6.46407 16.8336L16.835 6.46274C17.1591 6.13864 17.2239 5.55528 16.835 5.16637C16.4461 4.77747 15.8627 4.84228 15.5386 5.16637L5.16771 15.5373C4.9958 15.7092 4.89923 15.9423 4.89923 16.1855C4.89923 16.4286 4.9958 16.6617 5.16771 16.8336C5.55662 17.2225 6.13998 17.1577 6.46407 16.8336Z" fill="#0D0E10"></path>';
+            $headers .=              '<path d="M16.8318 15.5373L6.46088 5.16637C6.13679 4.84228 5.55342 4.77746 5.16451 5.16637C4.7756 5.55528 4.84042 6.13864 5.16451 6.46273L15.5354 16.8336C15.7073 17.0055 15.9405 17.1021 16.1836 17.1021C16.4267 17.1021 16.6599 17.0055 16.8318 16.8336C17.2207 16.4447 17.1559 15.8614 16.8318 15.5373Z" fill="#0D0E10"></path>';
+            $headers .=            '</svg>';
+            $headers .=            '<p></p>';
+            $headers .=            '<img src="' . get_stylesheet_directory_uri() . '/images/' . $post->post_name . '-small-logo.svg" alt="#" class="mx-auto my-2" />';
+            $headers .=            '<a href="javascript:void(0);" class="btn-bg-orange-500 duration-500 rounded text-white font-medium py-1 px-3 inline-block">Visit Site</a>';
+            $headers .=          '</div>';
+            $headers .=          '<a href="javascript:void(0);" class="text-black rounded border border-[#E9E9E9] text-center py-3 w-36 inline-block add-product hidden">';
+            $headers .=            '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="inline-block mr-2">';
+            $headers .=              '<path d="M11.9154 18.3333L11.9154 3.66667C11.9154 3.20833 11.5487 2.75 10.9987 2.75C10.4487 2.75 10.082 3.20833 10.082 3.66667L10.082 18.3333C10.082 18.5764 10.1786 18.8096 10.3505 18.9815C10.5224 19.1534 10.7556 19.25 10.9987 19.25C11.5487 19.25 11.9154 18.7917 11.9154 18.3333Z" fill="#0D0E10"/>';
+            $headers .=              '<path d="M3.66667 11.9167L18.3333 11.9167C18.7917 11.9167 19.25 11.55 19.25 11C19.25 10.45 18.7917 10.0833 18.3333 10.0833L3.66667 10.0833C3.42355 10.0833 3.19039 10.1799 3.01849 10.3518C2.84658 10.5237 2.75 10.7569 2.75 11C2.75 11.55 3.20833 11.9167 3.66667 11.9167Z" fill="#0D0E10"/>';
+            $headers .=            '</svg>';
+            $headers .=              'Read more';
+            $headers .=          '</a>';
+            $headers .=        '</th>';
+            $headings[] = $headers;
+
+            
+            unset($meta['_edit_lock']);
+            unset($meta['_edit_last']);
+            unset($meta['_wp_old_slug']);
+
+            
+            
+            $count++;
+        }
+        $meta = get_post_meta($posts[0]->ID);
+        unset($meta['_wp_old_slug']);
+        unset($meta['_edit_lock']);
+        unset($meta['_edit_last']);
+        foreach($meta as $key=>$value){
+           
+            $body  = '<tr>';
+            $body .=    '<td class="py-2 px-3 text-base text-left border">';
+            $body .=        '<div class="items-center justify-between flex">';
+            $body .=            ucwords(str_replace("_", " ", $key)); 
+            $body .=            '<img src="' . get_stylesheet_directory_uri() . '/images/question-mark.svg" class="inline-block" />';
+            $body .=        '</div>';
+            $body .=    '</td>';
+            for($i = 0; $i < count($posts); $i++){
+                if($key === 'overall_rating'){
+                    $body .= '<td class="py-2 px-3 text-base text-center border">';
+                    $body .=    '<div class="flex items-center mb-3 justify-center">';
+                    $body .=        '<div class="w-1/4 bg-gray-200 rounded h-1.5 mx-3">';
+                    $body .=            '<div class="bg-green-600 h-1.5 rounded" style="width: 88%"></div>';
+                    $body .=        '</div>';
+                    $body .=        '<div class="text-sm font-medium text-black">' . get_post_meta($posts[$i]->ID, $key, true).' <i class="text-xs ml-1 not-italic text-black">/10</i></div>';
+                    $body .=    '</div>';
+                    $body .= '</td>';
+                    
+                }else{
+                    
+                    $body .=    '<td class="py-2 px-3 text-base text-center border">';
+                    $body .=        '<div class="flex items-center mb-3 justify-center">';
+                    $body .=            '</div>';
+                    $body .=           '<div class="text-sm font-medium text-black">' . ucfirst( !get_post_meta($posts[$i]->ID, $key, true) ? 'N/A' :  get_post_meta($posts[$i]->ID, $key, true) ) . '</div>';
+                    $body .=        '</div>';
+                    $body .=   ' </td>';
+                }
+            }
+            $body .= '</tr>';
+            
+            $rows[] = $body;
+            
+            
+        }
+        
+       
+    if($posts){
+     $table['header']   = $headings;
+     $table['body']     = $rows; 
+    //  print_r($table['body']);die;
+	$response = array(
+						"returnType" => "true",
+						"message"	 => "Returned " . count($_REQUEST['data']['include_posts']) . ' records',
+                        "data" => $table
+					);
+		echo json_encode($response);
+	}else{
+		$response = array(
+						"returnType" => "false",
+						"message"	 => "Your details could not be submitted."
+					);
+		echo json_encode($response);
+	}
+    wp_die();
+}

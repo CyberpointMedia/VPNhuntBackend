@@ -250,7 +250,7 @@ function handle_guide_meta_data() {
 	  }else{
 		  $response = array(
 						          "returnType" => "false",
-						          "message"	 => "There are no guides matching your query."
+						          "message"	 => "There are no guides matching you.r query."
 					      );
 	  }
     echo json_encode($response);
@@ -258,7 +258,6 @@ function handle_guide_meta_data() {
 }
 
 function btn_shortcode( $atts, $content = null ) {
- 
   $a = shortcode_atts( array(
       'guide-id' => $atts['guide-id'],
       'guide-meta-key' => $atts['guide-meta-key']
