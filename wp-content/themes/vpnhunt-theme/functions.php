@@ -531,6 +531,7 @@ function get_comparison_template_data() {
         $headings = [];
         $rows = [];
         $table = [];
+        $row_title = "";
         foreach($posts as $post){
             $headers = '<th class="py-2 px-3 text-base font-medium text-center border">';
             $headers .=          '<div class="product-box p-5 relative">';
@@ -565,24 +566,44 @@ function get_comparison_template_data() {
         unset($meta['_wp_old_slug']);
         unset($meta['_edit_lock']);
         unset($meta['_edit_last']);
+        
         foreach($meta as $key=>$value){
-           
-            $body  = '<tr>';
-            $body .=    '<td class="py-2 px-3 text-base text-left border">';
-            $body .=        '<div class="items-center justify-between flex">';
-            $body .=            ucwords(str_replace("_", " ", $key)); 
-            $body .=            '<img src="' . get_stylesheet_directory_uri() . '/images/question-mark.svg" class="inline-block" />';
-            $body .=        '</div>';
-            $body .=    '</td>';
+            if($key == 'cheapest_price'){
+                $body  = '<tr>';
+                $body .=    '<td class="py-2 px-3 text-base text-left border">';
+                $body .=        '<div class="items-center justify-between flex">';
+                $body .=            ucwords(str_replace("_", " ", $key)); 
+                $body .=            '<img src="' . get_stylesheet_directory_uri() . '/images/question-mark.svg" class="inline-block" />';
+                $body .=        '</div>';
+                $body .=    '</td>';
+            }else if($key == 'cheapest_price'){
+
+            }else{
+                $body  = '<tr>';
+                $body .=    '<td class="py-2 px-3 text-base text-left border">';
+                $body .=        '<div class="items-center justify-between flex">';
+                $body .=            ucwords(str_replace("_", " ", $key)); 
+                $body .=            '<img src="' . get_stylesheet_directory_uri() . '/images/question-mark.svg" class="inline-block" />';
+                $body .=        '</div>';
+                $body .=    '</td>';
+            }
             for($i = 0; $i < count($posts); $i++){
                 if($key === 'overall_rating'){
                     $body .= '<td class="py-2 px-3 text-base text-center border">';
-                    $body .=    '<div class="flex items-center mb-3 justify-center">';
-                    $body .=        '<div class="w-1/4 bg-gray-200 rounded h-1.5 mx-3">';
-                    $body .=            '<div class="bg-green-600 h-1.5 rounded" style="width: 88%"></div>';
-                    $body .=        '</div>';
-                    $body .=        '<div class="text-sm font-medium text-black">' . get_post_meta($posts[$i]->ID, $key, true).' <i class="text-xs ml-1 not-italic text-black">/10</i></div>';
-                    $body .=    '</div>';
+                    if(get_post_meta($posts[$i]->ID, $key, true)){
+                    
+                        $body .=    '<div class="flex items-center mb-3 justify-center">';
+                        $body .=        '<div class="w-1/4 bg-gray-200 rounded h-1.5 mx-3">';
+                        $body .=            '<div class="bg-green-600 h-1.5 rounded" style="width: 88%"></div>';
+                        $body .=        '</div>';
+                        $body .=        '<div class="text-sm font-medium text-black">' . get_post_meta($posts[$i]->ID, $key, true).' <i class="text-xs ml-1 not-italic text-black">/10</i></div>';
+                        $body .=    '</div>';
+                    
+                    }else{
+                        $body .=    '<div class="flex items-center mb-3 justify-center">';
+                        $body .=        '<div class="text-sm font-medium text-black"> N/A </div>';
+                        $body .=    '</div>';
+                    }
                     $body .= '</td>';
                     
                 }else{
@@ -596,6 +617,58 @@ function get_comparison_template_data() {
                 }
             }
             $body .= '</tr>';
+            if($key ==  'expert_review_link'){
+                $row_title = "Pricing";
+                $body .=    '<tr>';
+                $body .=        '<td class="py-2 px-3 text-base font-medium text-left border bg-gray-light-200">' . $row_title . '</td>';
+                for($greys =0; $greys < count($posts); $greys++){
+                    $body .=             '<td class="py-2 px-3 text-base text-center border bg-gray-light-200">&nbsp;</td>';
+                }
+                $body .=     '</tr>';
+            }else if($key ==  'data_cap'){
+                $row_title = "Security & Privacy";
+                $body .=    '<tr>';
+                $body .=        '<td class="py-2 px-3 text-base font-medium text-left border bg-gray-light-200">' . $row_title . '</td>';
+                for($greys =0; $greys < count($posts); $greys++){
+                    $body .=             '<td class="py-2 px-3 text-base text-center border bg-gray-light-200">&nbsp;</td>';
+                }
+                $body .=     '</tr>';
+            }else if($key ==  'jurisdiction'){
+                $row_title = "Speed & Servers";
+                $body .=    '<tr>';
+                $body .=        '<td class="py-2 px-3 text-base font-medium text-left border bg-gray-light-200">' . $row_title . '</td>';
+                for($greys =0; $greys < count($posts); $greys++){
+                    $body .=             '<td class="py-2 px-3 text-base text-center border bg-gray-light-200">&nbsp;</td>';
+                }
+                $body .=     '</tr>';
+            }else if($key ==  'countries'){
+                $row_title = "Streaming & P2P";
+                $body .=    '<tr>';
+                $body .=        '<td class="py-2 px-3 text-base font-medium text-left border bg-gray-light-200">' . $row_title . '</td>';
+                for($greys =0; $greys < count($posts); $greys++){
+                    $body .=             '<td class="py-2 px-3 text-base text-center border bg-gray-light-200">&nbsp;</td>';
+                }
+                $body .=     '</tr>';
+            }else if($key ==  'torrenting'){
+                $row_title = "Compatibility";
+                $body .=    '<tr>';
+                $body .=        '<td class="py-2 px-3 text-base font-medium text-left border bg-gray-light-200">' . $row_title . '</td>';
+                for($greys =0; $greys < count($posts); $greys++){
+                    $body .=             '<td class="py-2 px-3 text-base text-center border bg-gray-light-200">&nbsp;</td>';
+                }
+                $body .=     '</tr>';
+            }else if($key ==  'smart_dns'){
+                $row_title = "Additional Info";
+                $body .=    '<tr>';
+                $body .=        '<td class="py-2 px-3 text-base font-medium text-left border bg-gray-light-200">' . $row_title . '</td>';
+                for($greys =0; $greys < count($posts); $greys++){
+                    $body .=             '<td class="py-2 px-3 text-base text-center border bg-gray-light-200">&nbsp;</td>';
+                }
+                $body .=     '</tr>';
+            }
+            
+            
+
             
             $rows[] = $body;
             
