@@ -219,14 +219,8 @@
           let allUnique = compare_array => compare_array.length === new Set(compare_array).size;
           
           if(allUnique(compare_array)){
-            var get_table = ajax_call('json', false,  'get_comparison_table', {'post_type': 'guides', 'include_posts': compare_array});
-            console.log(get_table.data.body);
-          
-
-           
-            
-            
-
+            $("span.error").html("");
+              var get_table = ajax_call('json', false,  'get_comparison_table', {'post_type': 'guides', 'include_posts': compare_array});
               $("table thead tr").html("");
               $("table tbody").html("");
               $("table thead tr").append('<th class="py-2 px-3 text-base font-medium text-center border-0">&nbsp;</th>');
@@ -304,18 +298,17 @@ function ajax_call(return_type, async, action, data){
         "action": action,
         "data": data
     },
+    before: function(){
+      $(".ajaxWait").show();
+    },
     success: function(result) {
         response = result;
-        if(response.returnType == "true"){
-            return response;
-        }else if(response.returnType == "false"){
-            return response;
-        }else{
-          return response;
-        }
     }
   });
-  
+  setTimeout(function(){
+      jQuery(".ajaxWait").hide();
+      jQuery("table").show();
+  },3000)
   return response;
 
 }
