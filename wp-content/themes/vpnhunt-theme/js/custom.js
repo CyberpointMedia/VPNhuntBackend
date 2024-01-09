@@ -1,5 +1,9 @@
 (function($){
   "use strict";  
+  let counter = 1;
+  const theme_dir = front_urls.theme_url;
+  const image_folder = front_urls.theme_url + "/images";
+  const defaultImage = front_urls.theme_url + "/images/default_image.png";
   // mobile humburger menu start 
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('navbar-sticky');
@@ -135,6 +139,118 @@
         self.toggleClass("collapsed");
         self.next(".accordion-content").toggleClass("hidden");
       });
+
+      // select vpn compare start // 
+      if($('.compare_listing')){
+        let langArray = [];
+        
+        let get_guides = ajax_call('json', false, 'get_guide', 'guides');
+        $(get_guides.data).each(function(){
+          var img = theme_dir + '/images/' + this.post_name + '-small-logo.svg';
+          var text = this.post_title.trim().replace('Guide','');
+          var value = this.ID;
+          var item = '<li><img src="'+ img +'" alt="" value="'+value+'"/><span>'+ text +'</span></li>';
+         
+          //$('.showCompare-item').find('.btn-select').attr("value", value);
+          langArray.push(item);
+        });
+        $('.showCompare-item').find('.btn-select').attr("value", get_guides.data[0].ID);
+        $('.compare_listing').html(langArray);
+        
+        //Set the button value to the first el of the array
+        $('.btn-select').html(langArray[0]);
+
+
+        //change button stuff on click
+        $('.compare_listing li').click(function(){
+            var img = $(this).find('img').attr("src");
+            var value = $(this).find('img').attr("value");
+            var text = this.innerText;
+            var item = '<li><img src="'+ img +'" alt="" /><span>'+ text +'</span></li>';
+            $(this).parents('.showCompare-item').find('.btn-select').html(item);
+            $(this).parents('.showCompare-item').find('.btn-select').attr("value", value);
+            $(this).parents('.showCompare-item').find('.compare_listing').toggle();
+        });
+
+        $("#add-compare").click(function() {
+          counter++;
+          
+          const originalDiv = $(".vpnCompare");
+        
+          // Clone the div with its content
+          const cloneDiv = originalDiv.clone(true);
+        
+          // Add the clone after the original div
+          $(".add-compare-row").append(cloneDiv);
+          cloneDiv.removeClass("vpnCompare").addClass("vpnCompare" + counter);
+          
+          if(counter >= 3){
+
+            $(this).slideUp("slow");
+            $("#remove-compare").slideDown("slow");
+          }
+          
+        });
+
+        $("#remove-compare").click(function() {
+          
+          $(".vpnCompare" + counter).remove(); 
+          
+          // Clone the div with its content
+          if(counter <= 3){
+            $(this).slideUp();
+            $("#add-compare").slideDown("slow");
+          }
+
+          counter--;
+        });
+
+        $("#compare-now").on("click", function(){
+          let headings = [];
+          let headers = [];
+          let compare_array = [];
+          headings.length = headers.length = compare_array.length = 0;
+          $(".vpnCompare").addClass("vpnCompare1");
+          
+          for(var i =1; i <= counter; i++){
+            compare_array.push($(".vpnCompare" + i + " .btn-select" ).attr("value")); 
+          }
+          
+          let allUnique = compare_array => compare_array.length === new Set(compare_array).size;
+          
+          if(allUnique(compare_array)){
+            var get_table = ajax_call('json', false,  'get_comparison_table', {'post_type': 'guides', 'include_posts': compare_array});
+            console.log(get_table.data.body);
+          
+
+           
+            
+            
+
+              $("table thead tr").html("");
+              $("table tbody").html("");
+              $("table thead tr").append('<th class="py-2 px-3 text-base font-medium text-center border-0">&nbsp;</th>');
+              $("table thead tr").append(get_table.data.header);
+              $("table thead tr").append(headings);
+              $("table tbody").append(get_table.data.body);
+          }else{
+            $("span.error").html("One of VPNs are selected more than once");
+          }
+          
+
+        });
+
+        $(".compareSelect-item").change( function(){
+          alert($(this).val());
+        })
+      }
+
+      $(".btn-select").click(function(){
+        $(this).parents('.showCompare-item').find('.compare_listing').toggle();
+      });
+      // select vpn compare start //
+
+
   });
   // slider for mobile end
   var count = 1;
@@ -173,5 +289,40 @@
         }
     }); 
   });
-
+  
 })(this.jQuery);
+
+
+function ajax_call(return_type, async, action, data){
+  
+  jQuery.ajax({
+    type : "POST",
+    dataType : return_type,
+    async: async,
+    url : front_urls.ajaxUrl,
+    data : { 
+        "action": action,
+        "data": data
+    },
+    success: function(result) {
+        response = result;
+        if(response.returnType == "true"){
+            return response;
+        }else if(response.returnType == "false"){
+            return response;
+        }else{
+          return response;
+        }
+    }
+  });
+  
+  return response;
+
+}
+
+function capitalize_text(input){
+  let newStr = input.replace(/_/g, " ");
+  newStr.trim();
+  newStr.toUpperCase();
+  return newStr;
+}
