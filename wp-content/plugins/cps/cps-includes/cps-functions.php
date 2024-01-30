@@ -149,7 +149,12 @@ function handle_contact_data() {
 
 add_action('media_buttons', 'add_my_media_button');
 function add_my_media_button() {
-  echo '<button type="button" id="shortcode-inserter" class="button" data-title="Guides" data-close="Close">Short Code Inserter</button>';
+  echo '<button type="button" id="shortcode-inserter" class="button" data-title="Guides" data-close="Close" data-type="meta">Short Code Inserter</button>';
+}
+
+add_action('media_buttons', 'add_list_shortcodes_button');
+function add_list_shortcodes_button() {
+  echo '<button type="button" id="list-shortcodes" class="button" data-title="Shortcodes" data-close="Close" data-type="shortcodes">List Shortcodes</button>';
 }
 
 function wpdocs_custom_admin_footer_text() {
@@ -163,19 +168,6 @@ function wpdocs_custom_admin_footer_text() {
                   </div>
                   <div class="modal-body">
                     
-                      <div class=" mb-3">
-                        <label for="inputPassword5" class="form-label">Search Guides</label>
-                        <input type="text" class="form-control form-control-sm" id="guideName" placeholder="Search guide">
-                        <button type="button" class="btn btn-sm btn-outline-dark pull-right mt-2">Search</button>
-                      </div>
-                       
-                    
-                    <div id="guidesResponseHTML">
-                    </div>
-                    <hr>
-                    <div id="guidesIDResponseHTML">
-                      
-                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -227,30 +219,46 @@ add_action( 'wp_ajax_get_guide_meta', 'handle_guide_meta_data' );
 add_action( 'wp_ajax_nopriv_get_guide_meta', 'handle_guide_meta_data' );
 
 function handle_guide_meta_data() {
-
-    $result = get_post_meta( $_REQUEST['data']);
-    //print_r($result);
+    $result = get_post_meta( $_REQUEST['data']['id']);
+    $dataType = $_REQUEST['data']['data_type'];
+    
     $data = [];
     $count = 0;
-   
-    foreach($result as $key=>$value){
+    if($dataType == "meta"){
+        foreach($result as $key=>$value){
      
-        $data[$count]['list_id'] = $key;
-        $data[$count]['list_text'] =  ucwords(str_replace('_', ' ', $key)) . ': <span class="fw-bold" data-key="' .wp_strip_all_tags($key). '">' . $value[0]. '</span><br/><span class="shortcode"</span>';
-        $count++;
+          $data[$count]['list_id'] = $key;
+          $data[$count]['list_text'] =  ucwords(str_replace('_', ' ', $key)) . ': <span class="fw-bold" data-key="' .wp_strip_all_tags($key). '">' . $value[0]. '</span><br/><span class="shortcode"</span>';
+          $count++;
       
+        }
+    }else if($dataType === "shortcodes"){
+      global $shortcode_tags;
+      $data = [];
+      $count = 0;
+      foreach($shortcode_tags as $key=>$value){
+        if(str_contains($key, "vpnhunt_")){ 
+          $data[$count]['list_id'] = $key;
+          $data[$count]['post_id'] = $_REQUEST['data']['id'];
+          $data[$count]['list_text'] = ucwords(str_replace("_", " ", str_replace("vpnhunt_", "", $key)));
+          $count++;
+
+        }else{
+          continue;
+        }
+      }
     }
     if($data){
 		  $response = array(
 						        "returnType" => "true",
-						        "message"	 => $count ." Meta options found for this post",
+						        "message"	 => $count ." ".$dataType ." options found for this post",
                     "data" => $data
 					        );
 		
 	  }else{
 		  $response = array(
 						          "returnType" => "false",
-						          "message"	 => "There are no guides matching you.r query."
+						          "message"	 => "There are no guides matching your query."
 					      );
 	  }
     echo json_encode($response);
@@ -258,6 +266,7 @@ function handle_guide_meta_data() {
 }
 
 function btn_shortcode( $atts, $content = null ) {
+ 
   $a = shortcode_atts( array(
       'guide-id' => $atts['guide-id'],
       'guide-meta-key' => $atts['guide-meta-key']
@@ -266,3 +275,185 @@ function btn_shortcode( $atts, $content = null ) {
   return $get_post_meta;
 }
 add_shortcode( 'display-guide-attributes', 'btn_shortcode' );
+
+
+/**
+ * Register meta boxes.
+ */
+
+function guides_register_meta_boxes() {
+  add_meta_box( 'guides-1', __( 'Extra Meta Fields', 'guides' ), 'guides_display_callback', 'guides' );
+}
+add_action( 'add_meta_boxes', 'guides_register_meta_boxes' );
+
+/**
+* Meta box display callback.
+*
+* @param WP_Post $post Current post object.
+*/
+function guides_display_callback( $post ) {
+  include( plugin_dir_path( __DIR__ ) . 'cps-templates/guides-form.php');
+}
+
+function guides_save_meta_box( $post_id ) {
+if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+  if ( $parent_id = wp_is_post_revision( $post_id ) ) {
+      $post_id = $parent_id;
+  }
+  if(isset($_REQUEST['_verd_pros'])){
+    $_POST['_verd_pros'] = implode("|", $_REQUEST['_verd_pros']);
+  }
+  if(isset($_REQUEST['_verd_cons'])){
+    $_POST['_verd_cons'] = implode("|", $_REQUEST['_verd_cons']);
+  }
+  
+  if(isset($_REQUEST['_verd_social'])){
+    $_POST['_verd_social'] = implode("|", $_REQUEST['_verd_social']);
+  }
+  $fields = [
+              '_tab_overall_rating',
+              '_tab_expert_review_link',
+              '_tab_cheapest_price',
+              '_tab_pay_monthly_price',
+              '_tab_free_trial',
+              '_tab_money_back_guarantee',
+              '_tab_data_cap',
+              '_tab_logging_policy',
+              '_tab_data_leaks',
+              '_tab_encryption',
+              '_tab_jurisdiction',
+              '_tab_average_local_download_speed',
+              '_tab_servers',
+              '_tab_ip_addresses',
+              '_tab_countries',
+              '_tab_us_netflix',
+              '_tab_streaming_services_nblocked',
+              '_tab_torrenting',
+              '_tab_simultaneous_connections',
+              '_tab_native_app_support',
+              '_tab_compatible_via_router',
+              '_tab_smart_dns',
+              '_tab_kill_switch',
+              '_tab_browser_extensions',
+              '_tab_works_in_china',
+              '_tab_support',
+              '_verd_title',
+              '_verd_description',
+              '_verd_social',
+              '_verd_pros',
+              '_verd_cons',
+              '_feat_price',
+              '_feat_money_back_guarantee',
+              '_feat_does_VPN_keep_logs',
+              '_feat_number_of_servers',
+              '_feat_number_of_devices_per_license',
+              '_feat_kill_switch',
+              '_feat_based_in_country',
+              '_feat_support',
+              '_feat_supports_torrenting',
+              '_stream_channel_4',
+              '_stream_amazon_prime_video',
+              '_stream_BBC_iPlayer',
+              '_stream_disney+',
+              '_stream_hotstar_india',
+              '_stream_hulu',
+              '_stream_ITVX',
+              '_stream_netflix_us',
+              '_stream_youtube',
+              '_coup_heading',
+              '_coup_text',
+              '_coup_button_text',
+              '_coup_text_below_button'
+            ];
+        
+  foreach ( $fields as $field ) {
+          
+      if ( array_key_exists( $field, $_POST ) ) {
+          update_post_meta( $post_id, $field, sanitize_text_field( $_POST[$field] ) );
+      }
+   }
+}
+add_action( 'save_post', 'guides_save_meta_box' );
+
+
+
+function pages_register_meta_boxes() {
+  add_meta_box( 'guides-1', __( 'Extra Meta Fields', 'guides' ), 'pages_display_callback', 'page' );
+}
+add_action( 'add_meta_boxes', 'pages_register_meta_boxes' );
+
+/**
+* Meta box display callback.
+*
+* @param WP_Post $post Current post object.
+*/
+function pages_display_callback( $post ) {
+
+  include( plugin_dir_path( __DIR__ ) . 'cps-templates/pages-form.php');
+
+}
+
+function pages_save_meta_box( $post_id ) {
+if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+  if ( $parent_id = wp_is_post_revision( $post_id ) ) {
+      $post_id = $parent_id;
+
+  }
+  if(isset($_REQUEST['_page_social'])){
+    $_POST['_page_social'] = implode("|", $_REQUEST['_page_social']);
+  }
+
+  $fields = [
+              '_page_author_name',
+              '_page_fact_checker',
+              '_page_editors_rating',
+              '_page_rating',
+              '_page_caption',
+              '_page_social'
+
+            ];
+        
+  foreach ( $fields as $field ) {
+          
+      if ( array_key_exists( $field, $_POST ) ) {
+          update_post_meta( $post_id, $field, sanitize_text_field( $_POST[$field] ) );
+      }
+   }
+}
+add_action( 'save_post', 'pages_save_meta_box' );
+
+function vpnhunt_list_all_shortcodes(){
+  global $shortcode_tags;
+  $data = [];
+  $count = 0;
+  foreach($shortcode_tags as $key=>$value){
+    if(str_contains($key, "vpnhunt_")){ 
+      $data[$count]['list_id'] = $key;
+      $data[$count]['list_text'] = '[' . $key . ']';
+      $count++;
+
+    }else{
+      continue;
+    }
+   
+  
+  }
+
+  if($data){
+    $response = array(
+                  "returnType" => "true",
+                  "message"	 => $count ." shortcodes found.",
+                  "data" => $data
+                );
+  
+  }else{
+    $response = array(
+                    "returnType" => "false",
+                    "message"	 => "There are no guides matching your query."
+              );
+  }
+  echo json_encode($response);
+  wp_die();
+}
+add_action( 'wp_ajax_list_all_shortcodes', 'vpnhunt_list_all_shortcodes' );
+add_action( 'wp_ajax_nopriv_list_all_shortcodes', 'vpnhunt_list_all_shortcodes' );

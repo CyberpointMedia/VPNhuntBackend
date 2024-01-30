@@ -21,7 +21,12 @@ add_action( "admin_enqueue_scripts", "cps_admin_scripts", 100 );
 function cps_frontend_scripts(){
     wp_enqueue_script( 'comment-reply' );
     wp_enqueue_script( "cps-frontend", "/wp-content/plugins/cps/js/cps-frontend.js", ['jquery'], time(), true);
-    wp_localize_script( 'cps-frontend', 'ajax', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
+    wp_localize_script( 'cps-frontend', 'global_consts',    array( 
+                                                                'url' => admin_url( 'admin-ajax.php' ),
+                                                                'year' => date('Y'),
+                                                                'year_month' => date('F, Y')
+                                                            )
+                                                        );
     
     
 }

@@ -102,18 +102,10 @@ get_header(); ?>
                     <!-- right content section start -->
 
                     <div class="right_content_sec">
+                    <h2 class="text-2xl lg:text-3xl font-medium text-black mb-5">Comparison Table</h2>
+                        <small class="ajaxWait">Responses will load here</small>
                         <div class="overflow-x-auto md:mb-14 mb-8 mt-6">
-                           
-                            <table class="w-auto table " style="display:none;">
-                                <thead>
-                                    <tr>
-                                        <th class="py-2 px-3 text-base font-medium text-center border-0">&nbsp;</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    
-                                </tbody>
-                            </table>
+                            <?php echo do_shortcode('[comparison_table]'); ?>
                         </div>
                         <div class="relative">
                             <h2 class="text-2xl lg:text-3xl font-medium text-black mb-5">Most popular comparisons</h2>

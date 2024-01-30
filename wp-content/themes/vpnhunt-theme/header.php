@@ -1,7 +1,24 @@
-<?php
-wp_head(); ?>
+<!DOCTYPE html>
+<html>
+<head>
+<title><?php the_title(); ?></title>
+
+<meta property="og:url"           content="<?php site_url(); ?>" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="<?php echo bloginfo('title'); ?>" />
+<meta property="og:description"   content="<?php echo bloginfo('description'); ?>" />
+<meta property="og:image"         content="<?php get_the_post_thumbnail_url(); ?>" />
+<?php wp_head(); ?> </head>
 
 <body <?php body_class(); ?> style="display:none">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
         <!-- header start here -->
         <header class="relative">
                 <div id="topbar" class="topbar py-2 bg-gray-light-100 duration-500">
@@ -49,7 +66,7 @@ wp_head(); ?>
                                                                 'container_id' => 'navbar-sticky',
                                                                 'container_class' => 'items-center justify-between duration-500 w-full lg:flex lg:w-auto lg:order-1',
                                                                 'menu_class' => 'flex flex-col p-4 lg:p-0 font-medium lg:space-x-10 rtl:space-x-reverse lg:flex-row lg:mt-0',                                                                                 
-                                                                'add_link_class'    => 'block p-3 text-black font-medium text-sm lg:p-0 hover:text-red-400'
+                                                                'add_link_class'    => 'block p-3 text-black font-medium text-sm lg:p-0 hover:text-red-400',
                                                         );
                                                 wp_nav_menu( $args ); 
                                         ?>

@@ -91,9 +91,6 @@
         drawVideo(); // Redraw video frames after resizing
       });
     
-    
-      // Append video to the DOM
-      // document.body.appendChild(video);
     }
   });
 
@@ -103,7 +100,18 @@
     $('body').slideDown(10);
   });
   $(document).ready(function(){
-   
+    const svg = '<svg class="w-2.5 h-2.5 ms-1 inline-block absolute lg:right-[-16px] right-[24px] lg:top-[5px] top-[16px] dropdown_arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg>';
+    $("#menu-header-menu > li").addClass("relative").addClass("group");
+    $("#menu-header-menu .relative.group > .sub-menu").addClass("mega-menu-dropdown absolute top-0 lg:-left-12 transition lg:group-hover:translate-y-5 lg:translate-y-0 lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible duration-500 ease-in-out lg:group-hover:transform z-50 min-w-[290px] lg:transform");
+
+    $("#menu-header-menu .relative.group.mega-menu-grid > .sub-menu").addClass("mega-menu-dropdown absolute top-0 lg:-left-12 transition lg:group-hover:translate-y-5 lg:translate-y-0 lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible duration-500 ease-in-out lg:group-hover:transform z-50 md:min-w-[560px] min-w-[290px] lg:transform");
+
+    $("#menu-header-menu > li > ul > li").addClass("relative top-0 lg:top-[22px] p-6 bg-white rounded-md lg:shadow-2xl shadow-xl w-full border").prepend('<div class="w-10 h-10 bg-white transform rotate-45 absolute top-0 left-0 z-[-1] transition-transform lg:translate-x-[4rem] translate-x-[1rem] duration-500 ease-in-out rounded-sm border"></div>');
+    $("#menu-header-menu .mega-menu-dropdown li > a").removeAttr('class').addClass("text-black font-bold text-base");
+    $("#menu-header-menu .mega-menu-dropdown li .sub-menu a").removeAttr('class').addClass("block p-2 -mx-2 transition ease-in-out duration-300 text-black-200 hover:text-red-400 font-normal text-sm");
+    $("#menu-header-menu > .sub-menu").addClass("relative z-10").children().wrapAll('<div><ul class="mt-3 text-[15px]"></ul></div>');
+    $("#menu-header-menu  .mega-menu-grid .sub-menu").addClass("relative z-10").children().wrapAll('<div><ul class="md:grid md:grid-cols-2 gap-4"><div><ul class="mt-3 text-[15px]"></ul></div></ul></div>');
+    $("#menu-header-menu .relative.group.menu-item-has-children > a").after(svg);
     $('.slider').slick({
         slidesToShow: 3,
         arrows: false,
@@ -243,7 +251,7 @@
         $(this).parents('.showCompare-item').find('.compare_listing').toggle();
       });
       // select vpn compare start //
-
+      
 
   });
   // slider for mobile end
@@ -283,12 +291,14 @@
         }
     }); 
   });
+
+  
   
 })(this.jQuery);
 
 
 function ajax_call(return_type, async, action, data){
-  
+  let response;
   jQuery.ajax({
     type : "POST",
     dataType : return_type,
@@ -298,18 +308,15 @@ function ajax_call(return_type, async, action, data){
         "action": action,
         "data": data
     },
-    before: function(){
-      $(".ajaxWait").show();
+    beforeSend: function(){
+       
+    
     },
     success: function(result) {
         response = result;
     }
   });
-  setTimeout(function(){
-      jQuery(".ajaxWait").hide();
-      jQuery("table").show();
-  },3000)
-  return response;
+    return response;
 
 }
 

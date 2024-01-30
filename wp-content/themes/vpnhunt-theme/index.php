@@ -10,7 +10,7 @@
                     <?php echo $cps_hero_section_settings['section_title']; ?>
                 </h1>
                 <p class="text-lg font-normal my-5"><?php echo $cps_hero_section_settings['section_description']; ?></p>
-        -1    </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4 justify-center text-center mt-8">
                 
                 <!-- card 1 start -->
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="mt-5">
-                <a href="javascript:void(0);" class="text-lg text-left font-medium py-1 pl-3 pr-14 rounded btn-bg-orange-500 duration-500 text-white inline-block w-auto relative" >Compare Yourself Now!<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/compare-icon.png" alt="#" class="absolute right-3 top-0" /></a>
+                <a href="<?php echo COMPARE_PAGE_LINK; //this is defined on the functions file ?>" class="text-lg text-left font-medium py-1 pl-3 pr-14 rounded btn-bg-orange-500 duration-500 text-white inline-block w-auto relative" >Compare Yourself Now!<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/compare-icon.png" alt="#" class="absolute right-3 top-0" /></a>
             </div>
         </div>
     </div>

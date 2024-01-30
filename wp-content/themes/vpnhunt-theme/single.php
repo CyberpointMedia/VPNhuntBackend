@@ -1,4 +1,4 @@
-<?php get_header(); the_content(); ?>
+<?php get_header(); //the_content(); ?>
 
     <!-- top banner start here -->
     <section class="top-bg bg-center bg-cover" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/contact-bg.png'); background-size: cover; background-repeat: no-repeat;">
@@ -153,103 +153,8 @@
                     <!-- right content section start -->
 
                     <div class="right_content_sec">
-                        <div class="relative">
-                            <div class="absolute -left-8 top-1 w-6 h-6  invisible md:visible">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-icon.svg" />
-							</div>
-                            <h3 class="text-2xl lg:text-3xl font-medium text-black my-5">Our Verdict</h3>
-                            <div class="bg-gray-light-100 rounded-2xl p-5 relative mt-6 py-7">
-                                <div class="flex flex-col md:flex-row justify-end items-center mb-3">
-                                    <div class="md:w-1/2 w-full font-medium text-red-400 mb-3 md:mb-0">
-										Ranked #1 out of 35 VPNs
-									</div>
-                                    <div class="md:w-1/2 w-full">
-                                        <div class="flex items-center mb-3 md:justify-end">
-                                            <div class="text-base font-medium text-black">Rating:</div>
-                                            <div class="w-1/4 bg-gray-200 rounded h-1.5 mx-3">
-                                                <div class="bg-green-600 h-1.5 rounded" style="width: 88%"></div>
-                                            </div>
-                                            <div class="text-sm font-medium text-black">9.7<i class="text-xs ml-1 not-italic text-black">/10</i><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/info-icon.svg" alt="#" class="ml-2 inline-block"/></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <p>
-                                        Our tests show that <a href="javascript:void(0);" class="text-red-400 font-medium">NordVPN is the better VPN</a>, beating Express VPN in 70% of our testing categories. NordVPN has servers in 34 more countries than Express VPN, and its international speeds are 8Mbps faster on average. But, <a href="javascript:void(0);" class="text-red-400 font-medium">NordVPN costs half the price</a>, and it includes more security settings. NordVPN is our winner, but ExpressVPN is a close second.
-                                    </p>
-                                    <div class="flex flex-wrap items-center mt-5">
-                                        <p class="text-base">Available on:</p>
-                                        <ul class="flex space-x-1 md:space-x-3 pl-3">
-                                            <li>
-                                                <a class="hover:text-red-400" href="javascript:void(0);"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ios.svg" alt="#" class="inline-block" /></a>
-                                            </li>
-
-                                            <li>
-                                                <a class="hover:text-red-400" href="javascript:void(0);"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/apple-icon.svg" alt="#" class="inline-block" /></a>
-                                            </li>
-
-                                            <li>
-                                                <a class="hover:text-red-400" href="javascript:void(0);"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/android-icon.svg" alt="#" class="inline-block" /></a>
-                                            </li>
-
-                                            <li>
-                                                <a class="hover:text-red-400" href="javascript:void(0);">
-													<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/window-icon.svg" alt="#" class="inline-block" /></a>
-                                            </li>
-
-                                            <li>
-                                                <a class="hover:text-red-400" href="javascript:void(0);"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/linux-icon.svg" alt="#" class="inline-block" /></a>
-                                            </li>
-
-                                            <li>
-                                                <a class="hover:text-red-400" href="javascript:void(0);">
-													<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/router-icon.svg" alt="#" class="inline-block" />
-												</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="flex flex-wrap flex-col md:flex-row bg-gray-dark-400 -mx-5 px-5 mt-7 -mb-7 pb-7 rounded-2xl rounded-tl-none rounded-tr-none">
-                                    <div class="md:w-1/2 w-full">
-                                        <div class="font-bold text-green-dark-400 my-4">Pros</div>
-                                        <ul class="ulList pros_list space-y-2 mr-2">
-                                            <li class="text-base">
-                                                Consistently fast speeds across any distance
-                                            </li>
-                                            <li class="text-base">
-                                                Unblocks 10 Netflix regions, Disney+, Hulu, Prime Video & more
-                                            </li>
-                                            <li class="text-base">
-                                                No-logs policy, AES-256 encryption & RAM-only servers
-                                            </li>
-                                            <li class="text-base">
-                                                Privacy-friendly British Virgin Islands (BVI) jurisdiction
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="md:w-1/2 w-full">
-                                        <div class="font-bold text-red-dark-400 my-4">Cons</div>
-                                        <ul class="ulList cons_list space-y-2">
-                                            <li class="text-base">
-                                                More expensive than its rivals
-                                            </li>
-                                            <li class="text-base">
-                                                No multi-hop or other advanced features
-                                            </li>
-                                            <li class="text-base">
-                                                Does not support port forwarding
-                                            </li>
-                                            <li class="text-base">
-                                                No split tunneling on macOS
-                                            </li>
-                                            <li class="text-base">
-                                                No Linux graphical user interface (GUI)
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        <?php echo do_shortcode( '[vpnhunt_our_verdict verdict_title="Our Verdict" post_id="214"]' ); ?>
 
                         <div class="py-5 lg:px-10 px-4 mt-10 mb-14 deal_coupon_box relative">
                             <div class="flex md:flex-row flex-col justify-between items-center md:mt-4">
@@ -293,95 +198,13 @@
                                 <br>
                                 In this section, we’ll take you through NordVPN’s features and what it has under its hood. One thing we’d like to highlight, though, is how innovative NordVPN has been throughout the years. We remember testing NordVPN over a year ago, and even though it was already good then, it wasn’t as good as now. They’ve added new features, improved its speed, and developed a new VPN protocol. The bottom line is, NordVPN continues to evolve.
                             </p>
-                            <h4 class="mt-10 text-xl lg:text-2xl font-medium text-black mb-5">NordVPN Features — 2023 Update</h4>
-                            <div class="rounded-2xl overflow-x-auto">
-                                <table class="w-full border-collaps">
-                                    <tbody>
-                                        <tr class="bg-gray-light-100">
-                                            <td class="py-3 px-5 border border-slate-200"><b>Price</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">3.19 USD/month</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-5 border border-slate-200"><b>Money Back Guarantee</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">30 Days</td>
-                                        </tr>
-                                        <tr class="bg-gray-light-100">
-                                            <td class="py-3 px-5 border border-slate-200"><b>Does VPN keep logs?</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">No</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-5 border border-slate-200"><b>Number of servers</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">5810+</td>
-                                        </tr>
-                                        <tr class="bg-gray-light-100">
-                                            <td class="py-3 px-5 border border-slate-200"><b>Number of devices per license</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">6</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-5 border border-slate-200"><b>Money-back guarantee</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">30 Days</td>
-                                        </tr>
-                                        <tr class="bg-gray-light-100">
-                                            <td class="py-3 px-5 border border-slate-200"><b>Kill switch</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-5 border border-slate-200"><b>Based in country</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">Panama</td>
-                                        </tr>
-                                        <tr class="bg-gray-light-100">
-                                            <td class="py-3 px-5 border border-slate-200"><b>Support</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">Live Chat Support</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-5 border border-slate-200"><b>Supports torrenting</b></td>
-                                            <td class="py-3 px-5 border border-slate-200">Yes</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <?php echo do_shortcode('[vpnhunt_vpn_features post_id="214"]'); ?>
                         </div>
 
                         <div class="md:mt-12 mt-8">
-                            <div class="shadow-xl rounded-2xl py-3 px-5 mb-8 md:mb-16 mt-8 border vpnHunt_trust_box relative bg-white">
-                                <div class="flex flex-col md:flex-row flex-wrap py-5">
-                                    <div class="md:w-4/5 w-full md:pr-10">
-                                        <h6 class="text-xl md:text-2xl font-medium mb-4">Why Trust vpnHunt?</h6>
-                                        <p class="text-base">
-                                            We’re completely independent and focused on VPN software. We’ve spent 150+ years and thousands of hours testing and reviewing VPNs using our unbiased VPN review process to recommend the best ones.
-                                            <br>
-                                            <br>
-                                            Here are some of our key VPN testing statistics:
-                                        </p>
-                                    </div>
-                                    <div class="w-1/5 hidden md:block">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-icon.svg" alt="#" />
-                                    </div>
-                                </div>
-                                <div class="flex flex-col md:flex-row flex-wrap my-5 md:space-x-5 xl:space-x-10 md:space-y-0 space-y-5">
-                                    <div class="flex flex-wrap items-start">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lab-icon.svg" alt="#" class="mr-1" />
-                                        <p>
-                                            <b class="font-bold block mb-1">35+</b>
-                                            <span class="text-base">VPNs Tested</span>
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-wrap items-start">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/stopwatch-icon.svg" alt="#" class="mr-1" />
-                                        <p>
-                                            <b class="font-bold block mb-1">16,000</b>
-                                            <span class="text-base">Total Hours of Testing</span>
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-wrap items-start">
-                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/money-icon.svg" alt="#" class="mr-1" />
-                                        <p>
-                                            <b class="font-bold block mb-1">$40,000</b>
-                                            <span class="text-base">Money Invested Of Testing</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            
+
+                            
                             <p>Streaming</p>
                             <div class="relative mt-2">
                                 <div class="absolute -left-8 top-1 w-6 h-6  invisible md:visible">

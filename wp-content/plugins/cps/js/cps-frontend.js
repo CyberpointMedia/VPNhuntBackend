@@ -15,7 +15,7 @@ jQuery(function( $ ){
 
 function fetch_comments(page_id){
    jQuery.ajax({
-      url: ajax.url,
+      url: global_consts.url,
       type: 'POST',
       data: {'action': 'ajaxify_comments', 'page_id': page_id},
       dataType: 'html',
@@ -82,7 +82,7 @@ jQuery(function( $ ){
          $.ajax({
                type : "POST",
                dataType : "json",
-               url : ajax.url,
+               url : global_consts.url,
                data : { 
                   "action": "contact_form_submit",
                   "formData": formData
@@ -100,6 +100,9 @@ jQuery(function( $ ){
             });
          }
       });
+      $('.current_year').html(global_consts.year);
+      $('.month_year').html(global_consts.year_month);
+      
    });
    $("#country_code").change(function(){
       var country_code = $("#country_code").val();
